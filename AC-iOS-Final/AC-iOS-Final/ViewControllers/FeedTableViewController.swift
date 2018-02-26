@@ -11,7 +11,6 @@ import Kingfisher
 class FeedTableViewController: UITableViewController {
     var posts = [Post](){
         didSet{
-            print(posts.first?.comment)
             tableView.reloadData()
         }
     }
@@ -21,7 +20,8 @@ class FeedTableViewController: UITableViewController {
         DataBaseService.manager.retrieveAllPosts(completion: { [weak self](postsFromFireBase) in
             self?.posts = postsFromFireBase
         }, errorHandler: {print($0)})
-
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
 
 
@@ -41,12 +41,13 @@ class FeedTableViewController: UITableViewController {
         FirebaseStorageManager.shared.retrieveImage(imgURL: postSetup.image, completionHandler: { (image) in
             cell.postImage.kf.indicatorType = .activity
             cell.postImage.image = image
+            cell.setNeedsLayout()
         }) { (error) in
             print(error)
         }
         return cell
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 200
+//    }
 }

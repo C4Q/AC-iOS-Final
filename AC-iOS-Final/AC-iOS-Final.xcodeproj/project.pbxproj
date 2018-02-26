@@ -24,6 +24,7 @@
 		81863AA72044932000183680 /* FireBaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA62044932000183680 /* FireBaseStorageManager.swift */; };
 		81863AA92044935400183680 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA82044935400183680 /* ImageHelper.swift */; };
 		81863AAB2044938100183680 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AAA2044938100183680 /* NetworkHelper.swift */; };
+		81863AAD2044B34D00183680 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AAC2044B34D00183680 /* LoginTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		81863AA62044932000183680 /* FireBaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageManager.swift; sourceTree = "<group>"; };
 		81863AA82044935400183680 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		81863AAA2044938100183680 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		81863AAC2044B34D00183680 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		89D07D1C257DD3BC5F196DF1 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 		DEEF638A9A8B47AB4668B3C8 /* Pods_AC_iOS_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				81863A962044686E00183680 /* FeedTableViewController.swift */,
 				81863A9A204470C200183680 /* PostTableViewController.swift */,
 				54915216203F335F009C7138 /* LoginViewController.swift */,
+				81863AAC2044B34D00183680 /* LoginTableViewController.swift */,
 				81863A8F20445E7100183680 /* Supporting Files */,
 			);
 			path = ViewControllers;
@@ -324,6 +327,7 @@
 				81863A972044686E00183680 /* FeedTableViewController.swift in Sources */,
 				81863A9E2044741200183680 /* Post.swift in Sources */,
 				81863AAB2044938100183680 /* NetworkHelper.swift in Sources */,
+				81863AAD2044B34D00183680 /* LoginTableViewController.swift in Sources */,
 				81863A99204468AD00183680 /* FeedCustomTableViewCell.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
 				81863AA72044932000183680 /* FireBaseStorageManager.swift in Sources */,

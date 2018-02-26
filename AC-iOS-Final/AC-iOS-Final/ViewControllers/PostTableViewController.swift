@@ -20,6 +20,11 @@ class PostTableViewController: UITableViewController,UIGestureRecognizerDelegate
     
     @IBAction func uploadBarButtonAction(_ sender: UIBarButtonItem) {
         guard let user = AuthenticationService.manager.getCurrentUser(), let currentImage = currentSelectedImage else {
+            let alertController = UIAlertController(title: "Plese allow access", message: nil, preferredStyle: .alert)
+            let okAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAlertAction)
+            present(alertController, animated: true, completion: nil)
+            checkAVAuthorization()
             return
         }
         guard  postComment.text != "You can add your comment here" else{
@@ -36,11 +41,8 @@ class PostTableViewController: UITableViewController,UIGestureRecognizerDelegate
         addGestures()
         self.postComment.delegate = self
         self.imagePickerViewController.delegate = self
-        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            cameraButtonItem.isEnabled = false
-        }
-        
         addDoneButtonOnKeyboard()
+        tableView.separatorColor = .clear
     }
     
     
@@ -88,10 +90,11 @@ extension PostTableViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { print("image is nil"); return }
         // resize the image
-        let sizeOfImage: CGSize = CGSize(width: 200, height: 200)
+        let sizeOfImage: CGSize = CGSize(width: 300, height: 300)
         let toucanImage = Toucan.Resize.resizeImage(image, size: sizeOfImage)
         currentSelectedImage = toucanImage
         self.postImage.image = currentSelectedImage
+        self.postImage.contentMode = .scaleAspectFit
         dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -109,6 +112,7 @@ extension PostTableViewController: UITextViewDelegate{
         }
         return true
     }
+    //this function will add a done button since textFields doesn't resign on return
     func addDoneButtonOnKeyboard()
     {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
@@ -123,9 +127,7 @@ extension PostTableViewController: UITextViewDelegate{
     @objc func doneButtonAction()
     {
         postComment.resignFirstResponder()
-//        CGPointMake(0.0f, -tableView.contentInset.top)
         let point = CGPoint(x: 0, y: -50)
-        
         tableView.setContentOffset(point, animated: false)
     }
 }
