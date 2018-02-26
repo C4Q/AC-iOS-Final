@@ -103,8 +103,7 @@
 				81CB10B420446F3D00EC4162 /* Services */,
 				81CB10D12044BBA700EC4162 /* Views */,
 				81CB10BB20447C9700EC4162 /* Models */,
-				54915218203F335F009C7138 /* Main.storyboard */,
-				81CB10C62044AB9600EC4162 /* TabBar.storyboard */,
+				81CB10D42044C91400EC4162 /* Storyboards */,
 				5491521D203F335F009C7138 /* LaunchScreen.storyboard */,
 				54915220203F335F009C7138 /* Info.plist */,
 				81CB10AE204460CB00EC4162 /* GoogleService-Info.plist */,
@@ -179,6 +178,15 @@
 				81CB10CF2044B69300EC4162 /* PostsFeedView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81CB10D42044C91400EC4162 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				54915218203F335F009C7138 /* Main.storyboard */,
+				81CB10C62044AB9600EC4162 /* TabBar.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
