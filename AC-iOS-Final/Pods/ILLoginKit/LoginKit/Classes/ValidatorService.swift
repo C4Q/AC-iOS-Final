@@ -39,9 +39,9 @@ public struct FullNameRule: ValidationRule {
 
         let components = input.components(separatedBy: " ")
 
-        guard components.count > 1 else {
-            return false
-        }
+//        guard components.count > 1 else {
+//            return false
+//        }
 
         guard let first = components.first, let last = components.last else {
             return false

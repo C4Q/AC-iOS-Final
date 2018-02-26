@@ -16,4 +16,5 @@ target 'AC-iOS-Final' do
     pod ‘ILLoginKit’
     pod 'AZTabBar'
     pod 'EasyNotificationBadge'
+    pod 'Material', '~> 2.0'
 end

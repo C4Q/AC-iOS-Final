@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		54915215203F335F009C7138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54915214203F335F009C7138 /* AppDelegate.swift */; };
-		54915217203F335F009C7138 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54915216203F335F009C7138 /* ViewController.swift */; };
-		5491521A203F335F009C7138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54915218203F335F009C7138 /* Main.storyboard */; };
+		54915217203F335F009C7138 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54915216203F335F009C7138 /* UploadVC.swift */; };
 		5491521F203F335F009C7138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5491521D203F335F009C7138 /* LaunchScreen.storyboard */; };
 		54915227203F339A009C7138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54915226203F339A009C7138 /* Assets.xcassets */; };
+		C40FB1752044B0D100C56E6A /* UIViewController+Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */; };
+		C415A558204485C900ADDB08 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C415A557204485C900ADDB08 /* FeedCell.swift */; };
+		C47BA7CA204475FF008A1D83 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BA7C9204475FF008A1D83 /* Post.swift */; };
+		C47BA7CD20447989008A1D83 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BA7CC20447989008A1D83 /* FeedVC.swift */; };
+		C48404BE2044832C00449B98 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48404BD2044832C00449B98 /* FeedView.swift */; };
 		C49DD18A20445D3800C4ACB7 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18920445D3800C4ACB7 /* TabBarVC.swift */; };
 		C49DD19220445DDF00C4ACB7 /* AZTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18D20445DDF00C4ACB7 /* AZTabBarButton.swift */; };
 		C49DD19320445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18E20445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift */; };
@@ -20,6 +24,19 @@
 		C49DD19620445DDF00C4ACB7 /* AZTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */; };
 		C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19720445E5900C4ACB7 /* Stylesheet.swift */; };
 		C49DD19A20445E6E00C4ACB7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */; };
+		C49DD19E2044618C00C4ACB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */; };
+		C49DD1A0204461F500C4ACB7 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19F204461F500C4ACB7 /* LoginCoordinator.swift */; };
+		C49DD1AF204465BA00C4ACB7 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A3204465BA00C4ACB7 /* AuthClient.swift */; };
+		C49DD1B0204465BA00C4ACB7 /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A4204465BA00C4ACB7 /* AuthDelegate.swift */; };
+		C49DD1B1204465BA00C4ACB7 /* DBService+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A6204465BA00C4ACB7 /* DBService+Post.swift */; };
+		C49DD1B2204465BA00C4ACB7 /* DBService+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A7204465BA00C4ACB7 /* DBService+Set.swift */; };
+		C49DD1B3204465BA00C4ACB7 /* DBService+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A8204465BA00C4ACB7 /* DBService+User.swift */; };
+		C49DD1B4204465BA00C4ACB7 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A9204465BA00C4ACB7 /* DBService.swift */; };
+		C49DD1B5204465BA00C4ACB7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AA204465BA00C4ACB7 /* Router.swift */; };
+		C49DD1B6204465BA00C4ACB7 /* StorageService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AC204465BA00C4ACB7 /* StorageService+Image.swift */; };
+		C49DD1B7204465BA00C4ACB7 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AD204465BA00C4ACB7 /* StorageService.swift */; };
+		C49DD1B8204465BA00C4ACB7 /* ToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AE204465BA00C4ACB7 /* ToolbarDelegate.swift */; };
+		C4F1500E20446DAB00E225F6 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1500D20446DAB00E225F6 /* UploadView.swift */; };
 		FEFCE4E14F7DCAD81F0681AC /* Pods_AC_iOS_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,13 +44,17 @@
 		47D8631A8C943ADD0741D882 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 		54915211203F335F009C7138 /* AC-iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54915214203F335F009C7138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54915216203F335F009C7138 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		54915219203F335F009C7138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54915216203F335F009C7138 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		5491521E203F335F009C7138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54915220203F335F009C7138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54915226203F339A009C7138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		956B37A7642E1B92E05B2426 /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
+		C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nav.swift"; sourceTree = "<group>"; };
+		C415A557204485C900ADDB08 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C47BA7C9204475FF008A1D83 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C47BA7CC20447989008A1D83 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C48404BD2044832C00449B98 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		C49DD18920445D3800C4ACB7 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		C49DD18D20445DDF00C4ACB7 /* AZTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarButton.swift; sourceTree = "<group>"; };
 		C49DD18E20445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarButtonDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +63,19 @@
 		C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarDelegate.swift; sourceTree = "<group>"; };
 		C49DD19720445E5900C4ACB7 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C49DD19F204461F500C4ACB7 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		C49DD1A3204465BA00C4ACB7 /* AuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		C49DD1A4204465BA00C4ACB7 /* AuthDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
+		C49DD1A6204465BA00C4ACB7 /* DBService+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DBService+Post.swift"; sourceTree = "<group>"; };
+		C49DD1A7204465BA00C4ACB7 /* DBService+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DBService+Set.swift"; sourceTree = "<group>"; };
+		C49DD1A8204465BA00C4ACB7 /* DBService+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DBService+User.swift"; sourceTree = "<group>"; };
+		C49DD1A9204465BA00C4ACB7 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		C49DD1AA204465BA00C4ACB7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C49DD1AC204465BA00C4ACB7 /* StorageService+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageService+Image.swift"; sourceTree = "<group>"; };
+		C49DD1AD204465BA00C4ACB7 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		C49DD1AE204465BA00C4ACB7 /* ToolbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarDelegate.swift; sourceTree = "<group>"; };
+		C4F1500D20446DAB00E225F6 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +114,14 @@
 				54915214203F335F009C7138 /* AppDelegate.swift */,
 				C49DD19B20445E7600C4ACB7 /* Stores */,
 				C49DD19C20445E8D00C4ACB7 /* Controllers */,
-				54915218203F335F009C7138 /* Main.storyboard */,
+				C49DD1A1204465BA00C4ACB7 /* Services */,
+				C47BA7CB20447636008A1D83 /* Model */,
 				5491521D203F335F009C7138 /* LaunchScreen.storyboard */,
+				C4F1500D20446DAB00E225F6 /* UploadView.swift */,
+				C415A557204485C900ADDB08 /* FeedCell.swift */,
+				C48404BD2044832C00449B98 /* FeedView.swift */,
 				54915220203F335F009C7138 /* Info.plist */,
+				C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */,
 				54915226203F339A009C7138 /* Assets.xcassets */,
 			);
 			path = "AC-iOS-Final";
@@ -95,6 +134,14 @@
 				47D8631A8C943ADD0741D882 /* Pods-AC-iOS-Final.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C47BA7CB20447636008A1D83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C47BA7C9204475FF008A1D83 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C49DD18C20445DDF00C4ACB7 /* Sources */ = {
@@ -115,6 +162,7 @@
 				C49DD18C20445DDF00C4ACB7 /* Sources */,
 				C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */,
 				C49DD19720445E5900C4ACB7 /* Stylesheet.swift */,
+				C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -123,9 +171,52 @@
 			isa = PBXGroup;
 			children = (
 				C49DD18920445D3800C4ACB7 /* TabBarVC.swift */,
-				54915216203F335F009C7138 /* ViewController.swift */,
+				54915216203F335F009C7138 /* UploadVC.swift */,
+				C47BA7CC20447989008A1D83 /* FeedVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C49DD1A1204465BA00C4ACB7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD19F204461F500C4ACB7 /* LoginCoordinator.swift */,
+				C49DD1A2204465BA00C4ACB7 /* Authentification */,
+				C49DD1A5204465BA00C4ACB7 /* Database */,
+				C49DD1AA204465BA00C4ACB7 /* Router.swift */,
+				C49DD1AB204465BA00C4ACB7 /* Storage */,
+				C49DD1AE204465BA00C4ACB7 /* ToolbarDelegate.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C49DD1A2204465BA00C4ACB7 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD1A3204465BA00C4ACB7 /* AuthClient.swift */,
+				C49DD1A4204465BA00C4ACB7 /* AuthDelegate.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		C49DD1A5204465BA00C4ACB7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD1A6204465BA00C4ACB7 /* DBService+Post.swift */,
+				C49DD1A7204465BA00C4ACB7 /* DBService+Set.swift */,
+				C49DD1A8204465BA00C4ACB7 /* DBService+User.swift */,
+				C49DD1A9204465BA00C4ACB7 /* DBService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C49DD1AB204465BA00C4ACB7 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD1AC204465BA00C4ACB7 /* StorageService+Image.swift */,
+				C49DD1AD204465BA00C4ACB7 /* StorageService.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		E05AA92FD1401E0294A91916 /* Frameworks */ = {
@@ -198,10 +289,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49DD19E2044618C00C4ACB7 /* GoogleService-Info.plist in Resources */,
 				5491521F203F335F009C7138 /* LaunchScreen.storyboard in Resources */,
 				54915227203F339A009C7138 /* Assets.xcassets in Resources */,
 				C49DD19520445DDF00C4ACB7 /* AZTabBarController.xib in Resources */,
-				5491521A203F335F009C7138 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +349,8 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -275,6 +368,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -292,13 +387,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49DD1B2204465BA00C4ACB7 /* DBService+Set.swift in Sources */,
+				C47BA7CD20447989008A1D83 /* FeedVC.swift in Sources */,
+				C47BA7CA204475FF008A1D83 /* Post.swift in Sources */,
+				C49DD1B4204465BA00C4ACB7 /* DBService.swift in Sources */,
+				C49DD1B8204465BA00C4ACB7 /* ToolbarDelegate.swift in Sources */,
 				C49DD19420445DDF00C4ACB7 /* AZTabBarController.swift in Sources */,
-				54915217203F335F009C7138 /* ViewController.swift in Sources */,
+				54915217203F335F009C7138 /* UploadVC.swift in Sources */,
+				C49DD1B0204465BA00C4ACB7 /* AuthDelegate.swift in Sources */,
+				C49DD1B7204465BA00C4ACB7 /* StorageService.swift in Sources */,
+				C49DD1A0204461F500C4ACB7 /* LoginCoordinator.swift in Sources */,
+				C49DD1B3204465BA00C4ACB7 /* DBService+User.swift in Sources */,
 				C49DD19620445DDF00C4ACB7 /* AZTabBarDelegate.swift in Sources */,
+				C49DD1B1204465BA00C4ACB7 /* DBService+Post.swift in Sources */,
+				C49DD1B6204465BA00C4ACB7 /* StorageService+Image.swift in Sources */,
+				C40FB1752044B0D100C56E6A /* UIViewController+Nav.swift in Sources */,
 				C49DD19A20445E6E00C4ACB7 /* UIColor+Hex.swift in Sources */,
+				C49DD1B5204465BA00C4ACB7 /* Router.swift in Sources */,
+				C48404BE2044832C00449B98 /* FeedView.swift in Sources */,
+				C49DD1AF204465BA00C4ACB7 /* AuthClient.swift in Sources */,
 				C49DD19320445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift in Sources */,
 				C49DD18A20445D3800C4ACB7 /* TabBarVC.swift in Sources */,
 				C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */,
+				C415A558204485C900ADDB08 /* FeedCell.swift in Sources */,
+				C4F1500E20446DAB00E225F6 /* UploadView.swift in Sources */,
 				C49DD19220445DDF00C4ACB7 /* AZTabBarButton.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
 			);
@@ -307,14 +419,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		54915218203F335F009C7138 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54915219203F335F009C7138 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5491521D203F335F009C7138 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,10 +543,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26RHXP32FH;
+				DEVELOPMENT_TEAM = RBE99A2Y96;
 				INFOPLIST_FILE = "AC-iOS-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,10 +559,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26RHXP32FH;
+				DEVELOPMENT_TEAM = RBE99A2Y96;
 				INFOPLIST_FILE = "AC-iOS-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-iOS-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = "c4q.AC-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

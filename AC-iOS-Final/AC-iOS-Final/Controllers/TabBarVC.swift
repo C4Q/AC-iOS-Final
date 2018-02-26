@@ -21,11 +21,11 @@ class TabBarVC: UIViewController {
         let tabController = AZTabBarController.insert(into: controller, withTabIconNames: tabIcons, andSelectedIconNames: tabIcons)
         
         // Set controllers inside tab bar
-        tabController.setViewController(ViewController(), atIndex: 0)
+        tabController.setViewController(FeedVC().inNavController(), atIndex: 0)
         tabController.setTitle("Feed", atIndex: 0)
         
         
-        tabController.setViewController(ViewController(), atIndex: 1)
+        tabController.setViewController(UploadVC(), atIndex: 1)
         tabController.setTitle("Upload", atIndex: 1)
         
         // Configure tab bar apparance
