@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="aiP-LQ-LLf">
+                                <rect key="frame" x="56.5" y="404" width="262.5" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUF-F1-hS0">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="0.32893285155296326" green="0.7812531590461731" blue="0.98977404832839966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ekk-05-Sap"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-4y-kNx">
+                                        <rect key="frame" x="153" y="0.0" width="109.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" red="0.32798370348794548" green="0.78723231380513736" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHe-oO-fqw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f1w-4y-kNx" firstAttribute="width" secondItem="ZUF-F1-hS0" secondAttribute="width" id="no1-nM-J2F"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="fpe-Ex-agL">
+                                <rect key="frame" x="56.5" y="303" width="262.5" height="81"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-Ta-vJT">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-Vl-0l5">
+                                        <rect key="frame" x="0.0" y="51" width="262.5" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="meatly_logo" translatesAutoresizingMaskIntoConstraints="NO" id="YbJ-eT-ogE">
+                                <rect key="frame" x="44" y="90" width="287" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YbJ-eT-ogE" secondAttribute="height" multiplier="15:8" id="FIe-1F-GBO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fpe-Ex-agL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8l4-oc-Svx"/>
+                            <constraint firstItem="fpe-Ex-agL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DSR-Ce-ajb"/>
+                            <constraint firstItem="fpe-Ex-agL" firstAttribute="top" secondItem="YbJ-eT-ogE" secondAttribute="bottom" constant="60" id="OiN-K7-qAr"/>
+                            <constraint firstItem="YbJ-eT-ogE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Rdk-IQ-G6u"/>
+                            <constraint firstItem="aiP-LQ-LLf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z3S-06-F3U"/>
+                            <constraint firstItem="YbJ-eT-ogE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bh1-4A-yGq"/>
+                            <constraint firstItem="fpe-Ex-agL" firstAttribute="width" secondItem="aiP-LQ-LLf" secondAttribute="width" id="eN0-Tc-kQR"/>
+                            <constraint firstItem="fpe-Ex-agL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="fQa-eN-uBE"/>
+                            <constraint firstItem="aiP-LQ-LLf" firstAttribute="top" secondItem="fpe-Ex-agL" secondAttribute="bottom" constant="20" id="zFB-UR-7nR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="xl0-Ta-vJT" id="Mif-vs-xtU"/>
+                        <outlet property="loginButton" destination="ZUF-F1-hS0" id="rNa-mF-tmS"/>
+                        <outlet property="passwordTF" destination="Bhg-Vl-0l5" id="04p-8g-ZNx"/>
+                        <outlet property="registerButton" destination="f1w-4y-kNx" id="2SY-jg-ucH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meatly_logo" width="171" height="152"/>
+    </resources>
 </document>
