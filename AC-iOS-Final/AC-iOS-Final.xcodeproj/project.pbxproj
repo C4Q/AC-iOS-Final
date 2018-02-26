@@ -12,9 +12,19 @@
 		5491521A203F335F009C7138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54915218203F335F009C7138 /* Main.storyboard */; };
 		5491521F203F335F009C7138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5491521D203F335F009C7138 /* LaunchScreen.storyboard */; };
 		54915227203F339A009C7138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54915226203F339A009C7138 /* Assets.xcassets */; };
+		C49DD18A20445D3800C4ACB7 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18920445D3800C4ACB7 /* TabBarVC.swift */; };
+		C49DD19220445DDF00C4ACB7 /* AZTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18D20445DDF00C4ACB7 /* AZTabBarButton.swift */; };
+		C49DD19320445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18E20445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift */; };
+		C49DD19420445DDF00C4ACB7 /* AZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD18F20445DDF00C4ACB7 /* AZTabBarController.swift */; };
+		C49DD19520445DDF00C4ACB7 /* AZTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49DD19020445DDF00C4ACB7 /* AZTabBarController.xib */; };
+		C49DD19620445DDF00C4ACB7 /* AZTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */; };
+		C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19720445E5900C4ACB7 /* Stylesheet.swift */; };
+		C49DD19A20445E6E00C4ACB7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */; };
+		FEFCE4E14F7DCAD81F0681AC /* Pods_AC_iOS_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D8631A8C943ADD0741D882 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 		54915211203F335F009C7138 /* AC-iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC-iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54915214203F335F009C7138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54915216203F335F009C7138 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,16 @@
 		5491521E203F335F009C7138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54915220203F335F009C7138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54915226203F339A009C7138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		956B37A7642E1B92E05B2426 /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
+		C49DD18920445D3800C4ACB7 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		C49DD18D20445DDF00C4ACB7 /* AZTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarButton.swift; sourceTree = "<group>"; };
+		C49DD18E20445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarButtonDelegate.swift; sourceTree = "<group>"; };
+		C49DD18F20445DDF00C4ACB7 /* AZTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarController.swift; sourceTree = "<group>"; };
+		C49DD19020445DDF00C4ACB7 /* AZTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AZTabBarController.xib; sourceTree = "<group>"; };
+		C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarDelegate.swift; sourceTree = "<group>"; };
+		C49DD19720445E5900C4ACB7 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
+		C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFCE4E14F7DCAD81F0681AC /* Pods_AC_iOS_Final.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				54915213203F335F009C7138 /* AC-iOS-Final */,
 				54915212203F335F009C7138 /* Products */,
+				B494948365DC747231E9C1FD /* Pods */,
+				E05AA92FD1401E0294A91916 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +78,62 @@
 			isa = PBXGroup;
 			children = (
 				54915214203F335F009C7138 /* AppDelegate.swift */,
-				54915216203F335F009C7138 /* ViewController.swift */,
+				C49DD19B20445E7600C4ACB7 /* Stores */,
+				C49DD19C20445E8D00C4ACB7 /* Controllers */,
 				54915218203F335F009C7138 /* Main.storyboard */,
 				5491521D203F335F009C7138 /* LaunchScreen.storyboard */,
 				54915220203F335F009C7138 /* Info.plist */,
 				54915226203F339A009C7138 /* Assets.xcassets */,
 			);
 			path = "AC-iOS-Final";
+			sourceTree = "<group>";
+		};
+		B494948365DC747231E9C1FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				956B37A7642E1B92E05B2426 /* Pods-AC-iOS-Final.debug.xcconfig */,
+				47D8631A8C943ADD0741D882 /* Pods-AC-iOS-Final.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C49DD18C20445DDF00C4ACB7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD18D20445DDF00C4ACB7 /* AZTabBarButton.swift */,
+				C49DD18E20445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift */,
+				C49DD18F20445DDF00C4ACB7 /* AZTabBarController.swift */,
+				C49DD19020445DDF00C4ACB7 /* AZTabBarController.xib */,
+				C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C49DD19B20445E7600C4ACB7 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD18C20445DDF00C4ACB7 /* Sources */,
+				C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */,
+				C49DD19720445E5900C4ACB7 /* Stylesheet.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		C49DD19C20445E8D00C4ACB7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C49DD18920445D3800C4ACB7 /* TabBarVC.swift */,
+				54915216203F335F009C7138 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E05AA92FD1401E0294A91916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54915223203F335F009C7138 /* Build configuration list for PBXNativeTarget "AC-iOS-Final" */;
 			buildPhases = (
+				0B35BD5BD5CC14FB5C6C8222 /* [CP] Check Pods Manifest.lock */,
 				5491520D203F335F009C7138 /* Sources */,
 				5491520E203F335F009C7138 /* Frameworks */,
 				5491520F203F335F009C7138 /* Resources */,
+				4747692F30792EABD8FE92A2 /* [CP] Embed Pods Frameworks */,
+				15749ED739234D358D6ECEB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,18 +200,106 @@
 			files = (
 				5491521F203F335F009C7138 /* LaunchScreen.storyboard in Resources */,
 				54915227203F339A009C7138 /* Assets.xcassets in Resources */,
+				C49DD19520445DDF00C4ACB7 /* AZTabBarController.xib in Resources */,
 				5491521A203F335F009C7138 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B35BD5BD5CC14FB5C6C8222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AC-iOS-Final-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15749ED739234D358D6ECEB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4747692F30792EABD8FE92A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AZTabBar/AZTabBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/EasyNotificationBadge/EasyNotificationBadge.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AZTabBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyNotificationBadge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5491520D203F335F009C7138 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49DD19420445DDF00C4ACB7 /* AZTabBarController.swift in Sources */,
 				54915217203F335F009C7138 /* ViewController.swift in Sources */,
+				C49DD19620445DDF00C4ACB7 /* AZTabBarDelegate.swift in Sources */,
+				C49DD19A20445E6E00C4ACB7 /* UIColor+Hex.swift in Sources */,
+				C49DD19320445DDF00C4ACB7 /* AZTabBarButtonDelegate.swift in Sources */,
+				C49DD18A20445D3800C4ACB7 /* TabBarVC.swift in Sources */,
+				C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */,
+				C49DD19220445DDF00C4ACB7 /* AZTabBarButton.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +435,7 @@
 		};
 		54915224203F335F009C7138 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 956B37A7642E1B92E05B2426 /* Pods-AC-iOS-Final.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +451,7 @@
 		};
 		54915225203F335F009C7138 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D8631A8C943ADD0741D882 /* Pods-AC-iOS-Final.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
