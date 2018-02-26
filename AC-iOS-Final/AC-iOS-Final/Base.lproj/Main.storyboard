@@ -174,11 +174,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xqY-Oy-xpK">
-                                <rect key="frame" x="16" y="91" width="375" height="332.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xqY-Oy-xpK">
+                                <rect key="frame" x="16" y="91" width="337.5" height="332.5"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qds-xY-hJd">
-                                <rect key="frame" x="16" y="473" width="375" height="100"/>
+                                <rect key="frame" x="16" y="473" width="337.5" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -198,12 +198,12 @@
                         <constraints>
                             <constraint firstItem="xqY-Oy-xpK" firstAttribute="height" secondItem="Fer-Ob-WRE" secondAttribute="height" multiplier="0.6" id="2nR-rn-9qe"/>
                             <constraint firstItem="xqY-Oy-xpK" firstAttribute="top" secondItem="Fer-Ob-WRE" secondAttribute="top" constant="27" id="5V9-6x-hlp"/>
-                            <constraint firstItem="xqY-Oy-xpK" firstAttribute="width" secondItem="Fer-Ob-WRE" secondAttribute="width" id="Ven-MG-6ep"/>
-                            <constraint firstItem="xqY-Oy-xpK" firstAttribute="leading" secondItem="Fer-Ob-WRE" secondAttribute="leading" constant="16" id="dGs-oY-rve"/>
-                            <constraint firstItem="Qds-xY-hJd" firstAttribute="height" secondItem="xqY-Oy-xpK" secondAttribute="height" multiplier="0.3" id="qrT-YY-PFY"/>
-                            <constraint firstItem="Qds-xY-hJd" firstAttribute="width" secondItem="xqY-Oy-xpK" secondAttribute="width" id="ree-yl-BhE"/>
-                            <constraint firstItem="Qds-xY-hJd" firstAttribute="top" secondItem="xqY-Oy-xpK" secondAttribute="bottom" constant="49.5" id="sAr-m3-5xl"/>
-                            <constraint firstItem="Qds-xY-hJd" firstAttribute="leading" secondItem="Fer-Ob-WRE" secondAttribute="leading" constant="16" id="uhu-F0-MUC"/>
+                            <constraint firstItem="Qds-xY-hJd" firstAttribute="height" secondItem="xqY-Oy-xpK" secondAttribute="height" multiplier="0.3" id="BhI-p1-WPL"/>
+                            <constraint firstItem="xqY-Oy-xpK" firstAttribute="width" secondItem="Fer-Ob-WRE" secondAttribute="width" multiplier="0.9" id="Ven-MG-6ep"/>
+                            <constraint firstItem="Qds-xY-hJd" firstAttribute="leading" secondItem="Fer-Ob-WRE" secondAttribute="leading" constant="16" id="XzD-qW-QIU"/>
+                            <constraint firstItem="Qds-xY-hJd" firstAttribute="width" secondItem="xqY-Oy-xpK" secondAttribute="width" id="evK-qo-LbM"/>
+                            <constraint firstItem="xqY-Oy-xpK" firstAttribute="leading" secondItem="Fer-Ob-WRE" secondAttribute="leading" constant="16" id="fKW-8r-QMu"/>
+                            <constraint firstItem="Qds-xY-hJd" firstAttribute="top" secondItem="xqY-Oy-xpK" secondAttribute="bottom" constant="49.5" id="vCg-qS-bkR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fer-Ob-WRE"/>
                     </view>
