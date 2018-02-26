@@ -25,8 +25,6 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(feedView)
-        //feedView.feedCollectionView.dataSource = self
-        //feedView.feedCollectionView.delegate = self
         feedView.feedTableView.dataSource = self
         feedView.feedTableView.delegate = self
         configureNavBar()
@@ -35,7 +33,7 @@ class FeedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Do Firebase stuff
+        // Firebase
         FirebaseDatabaseManager.shared.observePosts(completionHandler: { (posts) in
             self.posts = posts
         }) { (error) in
@@ -62,6 +60,7 @@ extension FeedViewController {
     }
 }
 
+// MARK: - Table view data source
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -81,11 +80,19 @@ extension FeedViewController: UITableViewDataSource {
 
 }
 
+// MARK: -  Table view delegate
 extension FeedViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }
 
 /*
+ *
+ *  Refactor into collection view
+ *
+ *
+ *
 
 // MARK: - Collection view data source
 extension FeedViewController: UICollectionViewDataSource {

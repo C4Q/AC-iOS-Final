@@ -83,7 +83,7 @@ extension LoginView {
     private func setupLogoImageView() {
         addSubview(logoImageView)
         logoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(15)
             make.leading.equalTo(safeAreaLayoutGuide.snp.leading)
             make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing)
             make.height.equalTo(safeAreaLayoutGuide.snp.height).multipliedBy(0.30)
@@ -93,7 +93,7 @@ extension LoginView {
     private func setupEmailTextField() {
         addSubview(emailTextField)
         emailTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(logoImageView.snp.bottom).offset(20)
+            make.top.equalTo(logoImageView.snp.bottom).offset(15)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             make.width.equalTo(safeAreaLayoutGuide.snp.width).multipliedBy(0.75)
         }
@@ -102,7 +102,7 @@ extension LoginView {
     private func setupPasswordTextField() {
         addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(emailTextField.snp.bottom).offset(20)
+            make.top.equalTo(emailTextField.snp.bottom).offset(15)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             make.width.equalTo(safeAreaLayoutGuide.snp.width).multipliedBy(0.75)
         }
@@ -111,7 +111,7 @@ extension LoginView {
     private func setupLoginButton() {
         addSubview(loginButton)
         loginButton.snp.makeConstraints { (make) in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(15)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             //make.width.equalTo(safeAreaLayoutGuide.snp.width).multipliedBy(0.75)
         }
@@ -120,7 +120,7 @@ extension LoginView {
     private func setupRegisterButton() {
         addSubview(registerButton)
         registerButton.snp.makeConstraints { (make) in
-            make.top.equalTo(loginButton.snp.bottom).offset(20)
+            make.top.equalTo(loginButton.snp.bottom).offset(5)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
         }
     }

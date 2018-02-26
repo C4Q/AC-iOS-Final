@@ -46,30 +46,55 @@ class PostTableViewCell: UITableViewCell {
 }
 
 // MARK: - Autolayout
+
+/*
+ *   Snap Kit does not play nicely with self sizing cells
+ */
+
 extension PostTableViewCell {
     private func setupViews() {
         setupCommentLabel()
         setupPostImageView()
     }
     
+//    private func setupCommentLabel() {
+//        addSubview(commentLabel)
+//        commentLabel.snp.makeConstraints { (make) in
+//            make.bottom.equalTo(snp.bottom)
+//            make.leading.equalTo(snp.leading).offset(AppSettings.padding)
+//            make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
+//        }
+//    }
+    
     private func setupCommentLabel() {
         addSubview(commentLabel)
-        commentLabel.snp.makeConstraints { (make) in
-            make.bottom.equalTo(snp.bottom)
-            make.leading.equalTo(snp.leading).offset(AppSettings.padding)
-            make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
-        }
+        commentLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            commentLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            commentLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            commentLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            ])
     }
+    
+//    private func setupPostImageView() {
+//        addSubview(postImageView)
+//        postImageView.snp.makeConstraints { (make) in
+//            make.bottom.equalTo(commentLabel.snp.top).offset(20)
+//            make.width.equalTo(snp.width)
+//            make.centerX.equalTo(snp.centerX)
+//            make.top.equalTo(snp.top)
+//        }
+//    }
     
     private func setupPostImageView() {
         addSubview(postImageView)
-        postImageView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(commentLabel.snp.top).offset(20)
-            make.leading.equalTo(snp.leading)
-            make.trailing.equalTo(snp.trailing)
-            make.top.equalTo(snp.top)
-        }
+        postImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            postImageView.bottomAnchor.constraint(equalTo: commentLabel.topAnchor),
+            postImageView.widthAnchor.constraint(equalTo: widthAnchor),
+            postImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            postImageView.topAnchor.constraint(equalTo: topAnchor)
+            ])
     }
-    
 
 }

@@ -27,7 +27,7 @@ class FirebaseStorageManager {
                     image: UIImage,
                     completionHandler: @escaping (Error?) -> Void) {
         
-        let sizeOfImage: CGSize = CGSize(width: 200, height: 200)
+        let sizeOfImage: CGSize = CGSize(width: 500, height: 500)
         let toucanImage = Toucan.Resize.resizeImage(image, size: sizeOfImage) ?? #imageLiteral(resourceName: "camera_icon")
         
         guard let data = UIImagePNGRepresentation(toucanImage) else { print("image is nil"); return }
@@ -93,11 +93,5 @@ class FirebaseStorageManager {
             }
         }
     }
-    
-//    func retrieveImage(imgURL: String,
-//                       completionHandler: @escaping (UIImage) -> Void,
-//                       errorHandler: @escaping (Error) -> Void) {
-//        ImageHelper.manager.getImage(from: imgURL, completionHandler: { completionHandler($0) }, errorHandler: { errorHandler($0) })
-//    }
 
 }

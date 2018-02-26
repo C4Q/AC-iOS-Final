@@ -26,7 +26,7 @@ class FirebaseDatabaseManager {
         let post = Post(userID: FirebaseAuthManager.shared.getCurrentUser()!.uid, comment: comment, imgURL: "")
         let postJSON = post.toJSON()
         child.setValue(postJSON)
-        // ADD IMAGE TO STORAGE
+        // Add image to storage
         FirebaseStorageManager.shared.storeImage(uid: child.key, image: image, completionHandler: { (error) in
             if let error = error {
                 completionHandler(error)
@@ -35,8 +35,6 @@ class FirebaseDatabaseManager {
             }
         })
     }
-    
-    
     
     func observePosts(completionHandler: @escaping ([Post]) -> Void,
                       errorHandler: @escaping (Error) -> Void) {

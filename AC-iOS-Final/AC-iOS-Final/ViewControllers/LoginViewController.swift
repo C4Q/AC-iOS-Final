@@ -10,8 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Properties
     let loginView = LoginView()
     
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loginView)
@@ -19,6 +21,7 @@ class LoginViewController: UIViewController {
         loginView.registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
     
+    // MARK: - Button actions
     @objc private func loginButtonTapped() {
         guard let emailText = loginView.emailTextField.text else { return }
         guard let passwordText = loginView.passwordTextField.text else { return }
@@ -28,6 +31,8 @@ class LoginViewController: UIViewController {
         FirebaseAuthManager.shared.login(email: emailText, password: passwordText) { (error) in
             if let error = error {
                 self.presentAlertWith(title: "Error", message: error.localizedDescription)
+            } else {
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -41,11 +46,10 @@ class LoginViewController: UIViewController {
         FirebaseAuthManager.shared.createAccount(email: emailText, password: passwordText) { (error) in
             if let error = error {
                 self.presentAlertWith(title: "Error", message: error.localizedDescription)
-                
+            } else {
+                self.presentAlertWith(title: "Success", message: "Account created. You can now log in.")
             }
         }
     }
     
-    
-
 }

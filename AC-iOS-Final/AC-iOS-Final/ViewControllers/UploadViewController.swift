@@ -37,7 +37,8 @@ extension UploadViewController {
     @objc private func doneButtonTapped() {
         guard let image = uploadView.pickImageView.image else { return }
         guard let comment = uploadView.commentTextView.text else { return }
-        // POST TO FIREBASE
+        uploadView.commentTextView.resignFirstResponder()
+        // Post to firebase
         FirebaseDatabaseManager.shared.createPost(comment: comment, image: image, completionHandler: { (error) in
             if let error = error {
                 self.presentAlertWith(title: "Error", message: error.localizedDescription)
@@ -104,14 +105,13 @@ extension UploadViewController {
     
     private func animateViewUp(by height: CGFloat) {
         UIView.animate(withDuration: 0.2) {
-            self.view.transform = CGAffineTransform.init(translationX: 0, y: -height)
+            self.view.transform = CGAffineTransform.init(translationX: 0, y: -(height - 60))
         }
     }
     
-    private func animateViewDown() { //by height: CGFloat
+    private func animateViewDown() {
         UIView.animate(withDuration: 0.2) {
             self.view.transform = CGAffineTransform.identity
         }
-
     }
 }

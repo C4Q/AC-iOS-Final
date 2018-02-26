@@ -25,8 +25,6 @@ class FeedView: UIView {
         let tableView = UITableView()
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "postCell")
         tableView.backgroundColor = .white
-        tableView.estimatedRowHeight = 300
-        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -65,6 +63,7 @@ extension FeedView {
     
     private func setupFeedTableView() {
         addSubview(feedTableView)
+        feedTableView.estimatedRowHeight = 300
         feedTableView.snp.makeConstraints { (make) in
             make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
         }
