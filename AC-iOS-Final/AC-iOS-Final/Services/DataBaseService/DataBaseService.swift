@@ -5,6 +5,13 @@
 //  Created by C4Q on 2/26/18.
 //  Copyright © 2018 C4Q . All rights reserved.
 //
+//service firebase.storage {
+//    match /b/{bucket}/o {
+//        match /{allPaths=**} {
+//            allow read, write: if request.auth != null;
+//        }
+//    }
+//}
 
 import Foundation
 import FirebaseDatabase

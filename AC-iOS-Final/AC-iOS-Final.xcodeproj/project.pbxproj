@@ -21,6 +21,9 @@
 		81863AA02044752600183680 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863A9F2044752600183680 /* AuthenticationService.swift */; };
 		81863AA3204483B400183680 /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA2204483B400183680 /* DataBaseService.swift */; };
 		81863AA52044844200183680 /* DataBaseService+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA42044844200183680 /* DataBaseService+Posts.swift */; };
+		81863AA72044932000183680 /* FireBaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA62044932000183680 /* FireBaseStorageManager.swift */; };
+		81863AA92044935400183680 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA82044935400183680 /* ImageHelper.swift */; };
+		81863AAB2044938100183680 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AAA2044938100183680 /* NetworkHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		81863A9F2044752600183680 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		81863AA2204483B400183680 /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
 		81863AA42044844200183680 /* DataBaseService+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataBaseService+Posts.swift"; sourceTree = "<group>"; };
+		81863AA62044932000183680 /* FireBaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageManager.swift; sourceTree = "<group>"; };
+		81863AA82044935400183680 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		81863AAA2044938100183680 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		89D07D1C257DD3BC5F196DF1 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 		DEEF638A9A8B47AB4668B3C8 /* Pods_AC_iOS_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +153,9 @@
 			children = (
 				81863AA2204483B400183680 /* DataBaseService.swift */,
 				81863AA42044844200183680 /* DataBaseService+Posts.swift */,
+				81863AA62044932000183680 /* FireBaseStorageManager.swift */,
+				81863AA82044935400183680 /* ImageHelper.swift */,
+				81863AAA2044938100183680 /* NetworkHelper.swift */,
 			);
 			path = DataBaseService;
 			sourceTree = "<group>";
@@ -314,11 +323,14 @@
 				54915217203F335F009C7138 /* LoginViewController.swift in Sources */,
 				81863A972044686E00183680 /* FeedTableViewController.swift in Sources */,
 				81863A9E2044741200183680 /* Post.swift in Sources */,
+				81863AAB2044938100183680 /* NetworkHelper.swift in Sources */,
 				81863A99204468AD00183680 /* FeedCustomTableViewCell.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
+				81863AA72044932000183680 /* FireBaseStorageManager.swift in Sources */,
 				81863AA3204483B400183680 /* DataBaseService.swift in Sources */,
 				81863AA02044752600183680 /* AuthenticationService.swift in Sources */,
 				81863AA52044844200183680 /* DataBaseService+Posts.swift in Sources */,
+				81863AA92044935400183680 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
