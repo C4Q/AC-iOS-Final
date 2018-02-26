@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,20 +14,58 @@
         <!--Unit6Final-staGram-->
         <scene sceneID="1bh-lK-LPC">
             <objects>
-                <viewController id="nvk-iL-K7D" sceneMemberID="viewController">
+                <viewController id="nvk-iL-K7D" customClass="AddPostViewController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbO-gk-ONN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-cD-sok">
+                                <rect key="frame" x="15" y="413" width="375" height="220"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koN-uI-i4m">
+                                <rect key="frame" x="-1" y="64" width="375" height="334"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-is-1XF">
+                                <rect key="frame" x="172" y="204" width="114" height="55"/>
+                                <state key="normal" title="cameraButton" image="camera_icon"/>
+                                <connections>
+                                    <action selector="showPhotpLibraryWith_sender:" destination="nvk-iL-K7D" eventType="touchUpInside" id="AgR-l4-maE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d9H-is-1XF" firstAttribute="centerX" secondItem="koN-uI-i4m" secondAttribute="centerX" id="1Ef-jF-8SB"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="leading" secondItem="RR3-Xp-MZR" secondAttribute="leading" constant="15" id="9AX-Vs-VgA"/>
+                            <constraint firstItem="d9H-is-1XF" firstAttribute="centerY" secondItem="koN-uI-i4m" secondAttribute="centerY" id="OBC-dR-9H5"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="bottom" secondItem="RR3-Xp-MZR" secondAttribute="bottom" constant="15" id="V3E-rJ-pci"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="top" secondItem="koN-uI-i4m" secondAttribute="bottom" constant="15" id="Xan-7N-hLt"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="trailing" secondItem="RR3-Xp-MZR" secondAttribute="trailing" constant="15" id="ZXR-bW-kJY"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="width" secondItem="jbO-gk-ONN" secondAttribute="width" id="r3U-x0-gwv"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="height" secondItem="jbO-gk-ONN" secondAttribute="height" multiplier="0.5" id="rKR-yw-Uvx"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="top" secondItem="RR3-Xp-MZR" secondAttribute="top" id="t6v-Le-HC3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RR3-Xp-MZR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unit6Final-staGram" id="LV1-5a-GPN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4Ki-uR-IUb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4Ki-uR-IUb">
+                            <connections>
+                                <action selector="done:" destination="nvk-iL-K7D" id="ceL-KO-KeN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="photoLibraryButton" destination="d9H-is-1XF" id="6kE-dd-aXk"/>
+                        <outlet property="postComment" destination="xjE-cD-sok" id="MQZ-ff-8TC"/>
+                        <outlet property="postImage" destination="koN-uI-i4m" id="SZc-kJ-QlI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lop-Rn-OKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="424"/>
+            <point key="canvasLocation" x="1808.8" y="423.23838080959524"/>
         </scene>
         <!--Post Feed View Controller-->
         <scene sceneID="Et3-cX-4Ey">
@@ -102,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera_icon" width="60" height="55"/>
         <image name="chickenleg" width="24" height="25"/>
         <image name="upload" width="25" height="25"/>
     </resources>
