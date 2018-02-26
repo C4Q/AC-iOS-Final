@@ -22,7 +22,7 @@ class FeedTableViewController: UITableViewController {
             self?.posts = postsFromFireBase
         }, errorHandler: {print($0)})
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 250
     }
 
 
