@@ -19,6 +19,8 @@
 		81863A9B204470C200183680 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863A9A204470C200183680 /* PostTableViewController.swift */; };
 		81863A9E2044741200183680 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863A9D2044741200183680 /* Post.swift */; };
 		81863AA02044752600183680 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863A9F2044752600183680 /* AuthenticationService.swift */; };
+		81863AA3204483B400183680 /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA2204483B400183680 /* DataBaseService.swift */; };
+		81863AA52044844200183680 /* DataBaseService+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81863AA42044844200183680 /* DataBaseService+Posts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		81863A9A204470C200183680 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		81863A9D2044741200183680 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		81863A9F2044752600183680 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		81863AA2204483B400183680 /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
+		81863AA42044844200183680 /* DataBaseService+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataBaseService+Posts.swift"; sourceTree = "<group>"; };
 		89D07D1C257DD3BC5F196DF1 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 		DEEF638A9A8B47AB4668B3C8 /* Pods_AC_iOS_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AC_iOS_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				81863A9F2044752600183680 /* AuthenticationService.swift */,
+				81863AA12044837D00183680 /* DataBaseService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -135,6 +140,15 @@
 				81863A9D2044741200183680 /* Post.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		81863AA12044837D00183680 /* DataBaseService */ = {
+			isa = PBXGroup;
+			children = (
+				81863AA2204483B400183680 /* DataBaseService.swift */,
+				81863AA42044844200183680 /* DataBaseService+Posts.swift */,
+			);
+			path = DataBaseService;
 			sourceTree = "<group>";
 		};
 		C47ECA8BE35CFB403DB528A8 /* Frameworks */ = {
@@ -302,7 +316,9 @@
 				81863A9E2044741200183680 /* Post.swift in Sources */,
 				81863A99204468AD00183680 /* FeedCustomTableViewCell.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
+				81863AA3204483B400183680 /* DataBaseService.swift in Sources */,
 				81863AA02044752600183680 /* AuthenticationService.swift in Sources */,
+				81863AA52044844200183680 /* DataBaseService+Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

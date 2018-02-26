@@ -7,11 +7,17 @@
 //
 
 import Foundation
-struct Post: Codable {
-    let comment: String
-    let userId: String
+class Post: Codable {
+    var comment: String
+    var userId: String
+    var postUId: String
     func intoJSON() -> Any{
         let jsonData = try! JSONEncoder().encode(self)
         return try! JSONSerialization.jsonObject(with: jsonData, options: [])
+    }
+    init(comment: String, userId: String, postUId: String) {
+        self.comment = comment
+        self.userId = userId
+        self.postUId = postUId
     }
 }
