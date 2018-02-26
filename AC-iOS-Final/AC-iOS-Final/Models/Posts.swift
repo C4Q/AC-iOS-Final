@@ -18,6 +18,5 @@ struct Posts {
         self.userID = userID
         self.comment = comment
     }
-    
-    
+
 }

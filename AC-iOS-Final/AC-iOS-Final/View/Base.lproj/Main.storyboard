@@ -175,6 +175,11 @@
                         <viewLayoutGuide key="safeArea" id="aFK-SK-5Vq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Post" id="Xch-kd-0wv">
+                        <barButtonItem key="leftBarButtonItem" title="Add Image" id="p31-5v-prh">
+                            <connections>
+                                <action selector="addImageTapped:" destination="p4G-KN-Gtg" id="H1A-6a-ob7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="hWh-SM-bmR">
                             <connections>
                                 <action selector="doneTapped:" destination="p4G-KN-Gtg" id="DTe-EG-Osv"/>
@@ -183,13 +188,19 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addImageButton" destination="p31-5v-prh" id="iqw-0N-Ihz"/>
                         <outlet property="commentTextView" destination="FAR-fR-kfg" id="dzG-Ex-JnU"/>
                         <outlet property="doneButton" destination="hWh-SM-bmR" id="8OK-KD-1C7"/>
                         <outlet property="feedPic" destination="WjR-Vx-qRZ" id="LSg-nV-0Bl"/>
+                        <outlet property="picTapGesture" destination="du6-fd-5Le" id="HQ7-t8-gFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tV-I0-t5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="du6-fd-5Le"/>
+                <tapGestureRecognizer id="du6-fd-5Le">
+                    <connections>
+                        <action selector="tapImage:" destination="p4G-KN-Gtg" id="rYe-BX-E53"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2596" y="626.53673163418296"/>
         </scene>
@@ -237,6 +248,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y1f-sC-8bL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gee-TU-OUV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

@@ -37,7 +37,6 @@ class LoginViewController: UIViewController {
             } else {
                 //success
                 print("registration successful!")
-                
                 if user != nil {
                     self.showOKAlert(title: "\((user?.email)!) Created!", message: "Good Job!", dismissCompletion: {
                         action in self.performSegue(withIdentifier: "toFeed", sender: self)
@@ -62,6 +61,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: EmailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
                 print(error!)
+                
             } else {
                 //success
                 print("login successful")

@@ -19,6 +19,8 @@
 		81DED44220446F6800F09D0C /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44020446F6800F09D0C /* FeedTableViewCell.swift */; };
 		81DED44320446F6800F09D0C /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81DED44120446F6800F09D0C /* FeedTableViewCell.xib */; };
 		81DED4462044710700F09D0C /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED4452044710700F09D0C /* Posts.swift */; };
+		81DED44C2044C0AA00F09D0C /* StorageService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */; };
+		81DED44D2044C0AA00F09D0C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44B2044C0AA00F09D0C /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		81DED44020446F6800F09D0C /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		81DED44120446F6800F09D0C /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		81DED4452044710700F09D0C /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageService+Image.swift"; sourceTree = "<group>"; };
+		81DED44B2044C0AA00F09D0C /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		9A10EB7C81C47EB4B76BD6A8 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +77,7 @@
 		54915213203F335F009C7138 /* AC-iOS-Final */ = {
 			isa = PBXGroup;
 			children = (
+				81DED4492044C07400F09D0C /* Services */,
 				81DED44420446F7400F09D0C /* View */,
 				81DED4392044636600F09D0C /* Controllers */,
 				81DED4382044635900F09D0C /* Models */,
@@ -127,6 +132,15 @@
 				81DED44120446F6800F09D0C /* FeedTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		81DED4492044C07400F09D0C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81DED44B2044C0AA00F09D0C /* StorageService.swift */,
+				81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F99610BF405A3D7DC8F88A43 /* Pods */ = {
@@ -280,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DED43B2044642C00F09D0C /* LoginViewController.swift in Sources */,
+				81DED44C2044C0AA00F09D0C /* StorageService+Image.swift in Sources */,
 				81DED4462044710700F09D0C /* Posts.swift in Sources */,
 				81DED43F204464F800F09D0C /* UploadViewController.swift in Sources */,
 				81DED43D204464E200F09D0C /* FeedViewController.swift in Sources */,
+				81DED44D2044C0AA00F09D0C /* StorageService.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
 				81DED44220446F6800F09D0C /* FeedTableViewCell.swift in Sources */,
 			);

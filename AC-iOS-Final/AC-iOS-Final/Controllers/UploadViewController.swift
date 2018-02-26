@@ -8,58 +8,84 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class UploadViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var feedPic: UIImageView!
     @IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet var picTapGesture: UITapGestureRecognizer!
+    @IBOutlet weak var addImageButton: UIBarButtonItem!
     
     let picker = UIImagePickerController()
-    
-    //TODO: Set the tapGesture here:
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(feedPicTapped))
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
         commentTextView.delegate = self
-        feedPic.addGestureRecognizer(tapGesture)
+        
+        //feedPic.addGestureRecognizer(tapGesture)
+        
     }
     
-    @objc func feedPicTapped() {
+    //MARK: -Image Picker setup
+    @IBAction func addImageTapped(_ sender: UIBarButtonItem) {
         picker.allowsEditing = false
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        self.present(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
+        
     }
-    
-    //MARK: - Picker Delegates
-    /*These two methods handle our selections in the library and camera. We can either handle the cancel case with imagePickerControllerDidCancel or handle media with didFinishPickingMediaWithInfo*/
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        self.feedPic.contentMode = .scaleAspectFit //3
-        self.feedPic.image = chosenImage //4
-        self.dismiss(animated:true, completion: nil) //5
+        feedPic.contentMode = .scaleAspectFit //3
+        feedPic.image = chosenImage //4
+        dismiss(animated:true, completion: nil) //5
+        
+        var data = Data()
+        data = UIImageJPEGRepresentation(chosenImage, 0.8)!
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        let imageRef = storageRef.child("images")
+        
+        _ = imageRef.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            let downloadURL = metadata.downloadURL
+            print(downloadURL)
+            
+            let key =  Database.database().reference().childByAutoId().key
+            let image = ["url" : downloadURL()?.absoluteString]
+            
+            let childUpdates = ["\(key)" : image]
+            
+        }
+        
     }
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func doneTapped(_ sender: UIBarButtonItem) {
-        //TODO Upload pics to FB
-        
-        
-        
-        
-        
+    
+    
+    //MARK: - Send data to storage and database
+
+    
+    func uploadCommentsToDB() {
         //TODO UPLOAD COMMENTS to FB
         let commentsDB = Database.database().reference().child("Posts")
         //save the users message as a dictionary
         let commentsDictionary = ["comment" : commentTextView.text,
-                                 "userID" : Auth.auth().currentUser?.uid]
+                                  "userID" : Auth.auth().currentUser?.uid]
         
         commentsDB.childByAutoId().setValue(commentsDictionary) { (error, reference) in
             if error != nil {
@@ -69,10 +95,14 @@ class UploadViewController: UIViewController, UITextViewDelegate, UIImagePickerC
                 
             }
         }
+    }
+
+    
+    @IBAction func doneTapped(_ sender: UIBarButtonItem) {
+        uploadCommentsToDB()
         
-        //dismiss the view???
+        
     }
     
 }
-
 
