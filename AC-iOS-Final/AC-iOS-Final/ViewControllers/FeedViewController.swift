@@ -70,10 +70,13 @@ extension FeedViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
         let post = posts[indexPath.row]
         cell.postImageView.kf.indicatorType = .activity
-        cell.postImageView.kf.setImage(with: URL(string: post.imgURL)!, placeholder: #imageLiteral(resourceName: "camera_icon"), options: nil, progressBlock: nil, completionHandler: nil)
+        cell.postImageView.kf.setImage(with: URL(string: post.imgURL)!, placeholder: #imageLiteral(resourceName: "camera_icon"), options: nil, progressBlock: nil) { (image, error, cacheType, url) in
+            if let _ = image {
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
         cell.commentLabel.text = post.comment
         cell.selectionStyle = .none
-        cell.setNeedsDisplay()
         return cell
     }
     

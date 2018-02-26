@@ -25,6 +25,12 @@ class UploadViewController: UIViewController {
         registerForKeyboardNotifications()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        uploadView.pickImageView.image = #imageLiteral(resourceName: "camera_icon")
+        uploadView.commentTextView.text = "Add a comment..."
+    }
+    
 }
 
 // MARK: - Nav bar

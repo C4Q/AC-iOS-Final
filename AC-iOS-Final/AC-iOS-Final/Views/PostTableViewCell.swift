@@ -13,9 +13,10 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - Properties
     lazy public var postImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.image = #imageLiteral(resourceName: "camera_icon")
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .lightGray
         return imageView
     }()
     
