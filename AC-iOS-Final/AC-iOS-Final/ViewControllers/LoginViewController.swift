@@ -15,12 +15,28 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loginView)
+        loginView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc private func loginButtonTapped() {
         
-        // Do Firebase stuff
+        guard let emailText = loginView.emailTextField.text else { return }
+        guard let passwordText = loginView.passwordTextField.text else { return }
+        guard !emailText.isEmpty else { return }
+        guard !passwordText.isEmpty else { return }
+        
+        FirebaseAuthManager.shared.createAccount(email: emailText, password: passwordText) { (error) in
+            if let error = error {
+                self.presentAlertWith(title: "Error", message: error.localizedDescription)
+
+            }
+        }
+        
+        FirebaseAuthManager.shared.login(email: emailText, password: passwordText) { (error) in
+            if let error = error {
+                self.presentAlertWith(title: "Error", message: error.localizedDescription)
+            }
+        }
     }
     
     

@@ -10,6 +10,15 @@ import UIKit
 import SnapKit
 
 class FeedView: UIView {
+    
+    lazy public var feedCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: safeAreaLayoutGuide.layoutFrame, collectionViewLayout: layout)
+        collectionView.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "postCell")
+        collectionView.backgroundColor = .red
+        return collectionView
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -26,7 +35,17 @@ class FeedView: UIView {
         setupViews()
     }
     
-    private func setupViews() {
-    }
+}
 
+extension FeedView {
+    private func setupViews() {
+        setupFeedCollectionView()
+    }
+    
+    private func setupFeedCollectionView() {
+        addSubview(feedCollectionView)
+        feedCollectionView.snp.makeConstraints { (make) in
+            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+        }
+    }
 }

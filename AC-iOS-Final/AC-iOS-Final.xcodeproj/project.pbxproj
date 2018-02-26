@@ -23,6 +23,8 @@
 		81E87D9D2044608100C79A37 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87D9C2044608100C79A37 /* FirebaseStorageManager.swift */; };
 		81E87DA0204460A300C79A37 /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87D9F204460A300C79A37 /* FirebaseModels.swift */; };
 		81E87DA3204463D300C79A37 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA2204463D300C79A37 /* UIViewController+Extensions.swift */; };
+		81E87DA6204469A700C79A37 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */; };
+		81E87DA820446D0C00C79A37 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA720446D0C00C79A37 /* AppSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		81E87D9C2044608100C79A37 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		81E87D9F204460A300C79A37 /* FirebaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
 		81E87DA2204463D300C79A37 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		81E87DA720446D0C00C79A37 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		B5BD00BBCC0C2E65A964870D /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
 		D081676FC39ACDBA1CD15009 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				81E87D912044602700C79A37 /* LoginView.swift */,
+				81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */,
 				81E87D932044603000C79A37 /* FeedView.swift */,
 				81E87D952044603A00C79A37 /* UploadView.swift */,
 			);
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				54915214203F335F009C7138 /* AppDelegate.swift */,
+				81E87DA720446D0C00C79A37 /* AppSettings.swift */,
 				81E87DA2204463D300C79A37 /* UIViewController+Extensions.swift */,
 				5491521D203F335F009C7138 /* LaunchScreen.storyboard */,
 				54915226203F339A009C7138 /* Assets.xcassets */,
@@ -301,6 +307,7 @@
 			files = (
 				81E87D8B20445EB800C79A37 /* LoginViewController.swift in Sources */,
 				81E87D992044606A00C79A37 /* FirebaseDatabaseManager.swift in Sources */,
+				81E87DA820446D0C00C79A37 /* AppSettings.swift in Sources */,
 				81E87D9D2044608100C79A37 /* FirebaseStorageManager.swift in Sources */,
 				81E87D8F2044600800C79A37 /* UploadViewController.swift in Sources */,
 				81E87DA3204463D300C79A37 /* UIViewController+Extensions.swift in Sources */,
@@ -308,6 +315,7 @@
 				81E87D8D20445EC100C79A37 /* FeedViewController.swift in Sources */,
 				81E87D922044602700C79A37 /* LoginView.swift in Sources */,
 				81E87DA0204460A300C79A37 /* FirebaseModels.swift in Sources */,
+				81E87DA6204469A700C79A37 /* PostCollectionViewCell.swift in Sources */,
 				81E87D962044603A00C79A37 /* UploadView.swift in Sources */,
 				81E87D942044603000C79A37 /* FeedView.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,

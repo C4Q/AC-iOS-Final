@@ -11,7 +11,7 @@ import SnapKit
 
 class LoginView: UIView {
 
-    // Properties
+    // MARK: - Properties
     lazy public var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -46,7 +46,7 @@ class LoginView: UIView {
     }()
     
     
-    // Initializers
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -64,7 +64,7 @@ class LoginView: UIView {
     
 }
 
-// Autolayout
+// MARK: - Autolayout
 extension LoginView {
     private func setupViews() {
         setupLogoImageView()
