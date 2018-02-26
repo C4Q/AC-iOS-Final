@@ -43,6 +43,8 @@ class PostTableViewController: UITableViewController,UIGestureRecognizerDelegate
         self.imagePickerViewController.delegate = self
         addDoneButtonOnKeyboard()
         tableView.separatorColor = .clear
+        postComment.layer.borderWidth = 1
+        postComment.layer.cornerRadius = 5
     }
     
     

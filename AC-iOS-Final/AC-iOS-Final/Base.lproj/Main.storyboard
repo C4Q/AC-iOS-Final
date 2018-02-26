@@ -275,7 +275,6 @@
         <!--Upload-->
         <scene sceneID="yCi-R6-RHG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f2n-XM-Tev" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Ij-Yc-9s9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Upload" image="upload" id="eL2-zL-eeM"/>
                     <toolbarItems/>
@@ -288,6 +287,7 @@
                         <segue destination="Okk-M6-jYO" kind="relationship" relationship="rootViewController" id="bXc-fJ-6QJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2n-XM-Tev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2641" y="392"/>
         </scene>

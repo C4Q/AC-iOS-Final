@@ -48,7 +48,20 @@ class FeedTableViewController: UITableViewController {
         }
         return cell
     }
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
+
 }
+// MARK: - Table view Delegate
+extension FeedTableViewController{
+//        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//            return 150
+//        }
+}
+
+
+
+
+
+
+
+
+
