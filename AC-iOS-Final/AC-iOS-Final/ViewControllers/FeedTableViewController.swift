@@ -12,6 +12,7 @@ class FeedTableViewController: UITableViewController {
     var posts = [Post](){
         didSet{
             tableView.reloadData()
+            tableView.needsUpdateConstraints()
         }
     }
     
@@ -21,7 +22,7 @@ class FeedTableViewController: UITableViewController {
             self?.posts = postsFromFireBase
         }, errorHandler: {print($0)})
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 150
     }
 
 

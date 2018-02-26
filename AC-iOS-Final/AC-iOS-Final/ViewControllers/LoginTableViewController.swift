@@ -54,7 +54,7 @@ class LoginTableViewController: UITableViewController {
        tableView.allowsSelection = false
         tableView.separatorColor = .clear
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillLayoutSubviews() {
         if AuthenticationService.manager.getCurrentUser() != nil{
             self.performSegue(withIdentifier: "feedSegue", sender: self)
         }
