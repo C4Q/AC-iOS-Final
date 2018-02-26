@@ -14,15 +14,27 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var posts: [Post] = []
-    var user: User!
-    
-    let postReference = Database.database().reference(withPath: "posts")
-    let usersReference = Database.database().reference(withPath: "online")
+  
+    private var authUserService = AuthUserService()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        DBService.manager.getPosts().observe(.value) { (snapshot) in
+            var post = [Post]()
+            for child in snapshot.children {
+                let dataSnapshot = child as! DataSnapshot
+                if let dict = dataSnapshot.value as? [String : Any] {
+                    let post = Post.init(postDict: dict)
+                    self.posts.append(post)
+                    self.tableView.reloadData()
+                }
+            }
+        
+        }
+
     }
 
     @IBAction func logOutPressed(_ sender: AnyObject) {
@@ -42,7 +54,8 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Post Cell", for: indexPath) as! CustomCell
         let post = posts[indexPath.row]
-        
+        //cell.postImage.image 
+        cell.postComment.text = post.comment
         //cell.comment.text = post.comment
         //cell.image.image =\
         return cell

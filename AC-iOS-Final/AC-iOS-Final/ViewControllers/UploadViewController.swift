@@ -20,7 +20,6 @@ class UploadViewController: UIViewController {
     private let imagePickerController = UIImagePickerController()
     
     private var currentSelectedImage: UIImage!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePickerController.delegate = self
@@ -37,7 +36,7 @@ class UploadViewController: UIViewController {
         guard let comment = comment.text else { print("title is nil"); return }
         guard !comment.isEmpty else { print("title is empty"); return }
         DBService.manager.addPost(comment: comment, image: image)
-       // dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
 }
@@ -75,6 +74,7 @@ extension UploadViewController: UIImagePickerControllerDelegate,UINavigationCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {return}
         imageView.image = image
+        currentSelectedImage = image
         dismiss(animated: true, completion: nil)
     }
 
