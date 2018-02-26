@@ -112,4 +112,9 @@ extension FeedVC: AuthDelegate {
         print("Signed in user \(user.email)")
         dismiss(animated: true, completion: nil)
     }
+    
+    func didCreateUser(user: User) {
+        print("Created user \(user.email)")
+        dismiss(animated: true, completion: nil)
+    }
 }
