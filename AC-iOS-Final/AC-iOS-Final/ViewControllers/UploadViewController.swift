@@ -38,6 +38,7 @@ extension UploadViewController {
     private func configureNavBar() {
         navigationItem.title = "Upload"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Hide Keyboard", style: .plain, target: self, action: #selector(hideKeyboardButtonTapped))
     }
     
     @objc private func doneButtonTapped() {
@@ -53,6 +54,10 @@ extension UploadViewController {
             }
             
         })
+    }
+    
+    @objc private func hideKeyboardButtonTapped() {
+        uploadView.commentTextView.resignFirstResponder()
     }
 }
 
