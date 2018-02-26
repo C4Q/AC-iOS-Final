@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import SnapKit
 
 class PostCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     lazy public var postImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .lightGray
         imageView.image = #imageLiteral(resourceName: "camera_icon")
         return imageView
     }()
@@ -47,6 +49,26 @@ class PostCollectionViewCell: UICollectionViewCell {
 // MARK: - Autolayout
 extension PostCollectionViewCell {
     private func setupViews() {
-        
+        setupPostImageView()
+        setupCommentLabel()
+    }
+    
+    private func setupPostImageView() {
+        addSubview(postImageView)
+        postImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(snp.top)
+            make.leading.equalTo(snp.leading)
+            make.trailing.equalTo(snp.trailing)
+        }
+    }
+    
+    private func setupCommentLabel() {
+        addSubview(commentLabel)
+        commentLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(postImageView.snp.bottom).offset(AppSettings.padding)
+            make.leading.equalTo(snp.leading).offset(AppSettings.padding)
+            make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
+            make.bottom.equalTo(snp.bottom).offset(AppSettings.padding)
+        }
     }
 }

@@ -61,6 +61,7 @@ extension UploadViewController: UIImagePickerControllerDelegate, UINavigationCon
         }
     }
     
+    // Gets image from photo lib and sets the imageview image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         uploadView.pickImageView.image = image

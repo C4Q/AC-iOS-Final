@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseStorage
+import FirebaseDatabase
 import Toucan
 
 class FirebaseStorageManager {
@@ -59,8 +60,7 @@ class FirebaseStorageManager {
             
             // set job's imageURL
             let imageURL = String(describing: snapshot.metadata!.downloadURL()!)
-            print(imageURL)
-            //Database.database().reference(withPath: "posts").child(uid).child("image").setValue(imageURL)
+            Database.database().reference(withPath: "posts").child(uid).child("imgURL").setValue(imageURL)
             
             
         }

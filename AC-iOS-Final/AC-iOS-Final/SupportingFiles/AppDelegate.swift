@@ -23,15 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let loginVC = LoginViewController()
         loginVC.tabBarItem = UITabBarItem(title: "Login", image: nil, tag: 2)
+        
+        // Feed tab
         let feedVC = FeedViewController()
-        feedVC.tabBarItem = UITabBarItem(title: "Feed", image: #imageLiteral(resourceName: "chickenleg"), tag: 0)
+        let feedNavController = UINavigationController(rootViewController: feedVC)
+        feedNavController.tabBarItem = UITabBarItem(title: "Feed", image: #imageLiteral(resourceName: "chickenleg"), tag: 0)
         
-        
+        // Upload tab
         let uploadVC = UploadViewController()
         let uploadNavController = UINavigationController(rootViewController: uploadVC)
         uploadNavController.tabBarItem = UITabBarItem(title: "Upload", image: #imageLiteral(resourceName: "upload"), tag: 1)
         
-        tabBarController.viewControllers = [loginVC, feedVC, uploadNavController]
+        tabBarController.viewControllers = [loginVC, feedNavController, uploadNavController]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

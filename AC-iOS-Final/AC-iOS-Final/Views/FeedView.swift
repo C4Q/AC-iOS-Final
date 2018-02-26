@@ -16,7 +16,6 @@ class FeedView: UIView {
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: safeAreaLayoutGuide.layoutFrame, collectionViewLayout: layout)
         collectionView.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "postCell")
-        collectionView.backgroundColor = .red
         return collectionView
     }()
 

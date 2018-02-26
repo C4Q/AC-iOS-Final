@@ -11,6 +11,7 @@ import Foundation
 struct Post: Codable {
     let userID: String
     let comment: String
+    let imgURL: String
     
     func toJSON() -> Any {
         let jsonData = try! JSONEncoder().encode(self)

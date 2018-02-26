@@ -21,7 +21,7 @@ class FirebaseDatabaseManager {
     
     func createPost(comment: String, image: UIImage) {
         let child = postRef.childByAutoId()
-        let post = Post(userID: FirebaseAuthManager.shared.getCurrentUser()!.uid, comment: comment)
+        let post = Post(userID: FirebaseAuthManager.shared.getCurrentUser()!.uid, comment: comment, imgURL: "")
         let postJSON = post.toJSON()
         child.setValue(postJSON)
         // ADD IMAGE TO STORAGE
@@ -32,8 +32,22 @@ class FirebaseDatabaseManager {
     
     func observePosts(completionHandler: @escaping ([Post]) -> Void,
                       errorHandler: @escaping (Error) -> Void) {
-        let _ = postRef.observe(.value) { (snapshot) in
-            print(snapshot)
+        let _ = postRef.observe(.value) { (dataSnapshot) in
+            var posts = [Post]()
+            for child in dataSnapshot.children {
+                let snapshot = child as! DataSnapshot
+                if let data = snapshot.value  {
+                    do {
+                        let json = try JSONSerialization.data(withJSONObject: data, options: [])
+                        let post = try JSONDecoder().decode(Post.self, from: json)
+                        posts.append(post)
+                    } catch {
+                        errorHandler(error)
+                    }
+                }
+                
+            }
+            completionHandler(posts)
         }
     }
     

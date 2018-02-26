@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeedViewController: UIViewController {
 
     // MARK: - Properties
     let feedView = FeedView()
     
+    var posts = [Post]() {
+        didSet {
+            feedView.feedCollectionView.reloadData()
+        }
+    }
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -20,14 +26,18 @@ class FeedViewController: UIViewController {
         view.addSubview(feedView)
         feedView.feedCollectionView.dataSource = self
         feedView.feedCollectionView.delegate = self
-
+        configureNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Do Firebase stuff
-        FirebaseDatabaseManager.shared
+        FirebaseDatabaseManager.shared.observePosts(completionHandler: { (posts) in
+            self.posts = posts
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,23 +52,38 @@ class FeedViewController: UIViewController {
 
 }
 
+// MARK: - Nav bar
+extension FeedViewController {
+    private func configureNavBar() {
+        navigationItem.title = "Home Feed"
+    }
+}
+
+// MARK: - Collection view data source
 extension FeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCollectionViewCell
+        let post = posts[indexPath.row]
         cell.backgroundColor = .blue
+        cell.postImageView.kf.indicatorType = .activity
+        cell.postImageView.kf.setImage(with: URL(string: post.imgURL)!)
+        cell.commentLabel.text = post.comment
+        cell.setNeedsLayout()
         return cell
     }
     
 }
 
+// MARK: - Collection view delegate
 extension FeedViewController: UICollectionViewDelegate {
     
 }
 
+// MARK: - Collection iew delegate flow layout
 extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.bounds.width - (AppSettings.cellSpacing * 2)), height: (collectionView.bounds.height - (AppSettings.cellSpacing * 2)))
