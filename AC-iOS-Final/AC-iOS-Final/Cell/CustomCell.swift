@@ -10,6 +10,9 @@ import UIKit
 
 class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postComment: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

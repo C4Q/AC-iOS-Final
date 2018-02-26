@@ -50,6 +50,10 @@ Copyright 2018 Google
 
 Copyright 2017 Google
 
+## FirebaseStorage
+
+Copyright 2018 Google
+
 ## GTMSessionFetcher
 
 

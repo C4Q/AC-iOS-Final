@@ -12,5 +12,6 @@ target 'AC-iOS-Final' do
     pod 'Firebase/Database'
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
+    pod 'Firebase/Storage'
 
 end
