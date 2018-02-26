@@ -54,9 +54,9 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Post Cell", for: indexPath) as! CustomCell
         let post = posts[indexPath.row]
-        //cell.postImage.image 
+        //cell.postImage.image = post.imageURL
         cell.postComment.text = post.comment
-        //cell.comment.text = post.comment
+       
         //cell.image.image =\
         return cell
     }
