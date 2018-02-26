@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true // allows the user tobe able to use the app offline
+         IQKeyboardManager.sharedManager().enable = true
+        
+        var viewController: UIViewController!
+        
+        if let _ = AuthUserManager.manager.getCurrentUser()  {
+            let tabController = TabBarController.storyboardInstance()
+            viewController = tabController
+        } else {
+            let loginVC = LoginVC.storyboardInstance()
+            viewController = loginVC
+        }
+        //FirebasePostManager.manager.addPostToFirebase(uid: "1", userUID: "2", comment: "This is fun")
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 
