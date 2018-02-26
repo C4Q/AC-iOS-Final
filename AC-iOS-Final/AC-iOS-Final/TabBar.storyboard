@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Unit6Final-staGram-->
         <scene sceneID="1bh-lK-LPC">
             <objects>
                 <viewController id="nvk-iL-K7D" sceneMemberID="viewController">
@@ -20,16 +20,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="RR3-Xp-MZR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LV1-5a-GPN"/>
+                    <navigationItem key="navigationItem" title="Unit6Final-staGram" id="LV1-5a-GPN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4Ki-uR-IUb"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lop-Rn-OKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432.80000000000001" y="404.34782608695656"/>
+            <point key="canvasLocation" x="1809" y="424"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Feed View Controller-->
         <scene sceneID="Et3-cX-4Ey">
             <objects>
-                <viewController id="Jtr-8n-zVH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostFeedViewController" id="Jtr-8n-zVH" customClass="PostFeedViewController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgw-5y-oXF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1r-kh-7Qt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432.80000000000001" y="-262.21889055472263"/>
+            <point key="canvasLocation" x="1810" y="-263"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4Fj-4b-jiX">
@@ -60,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="-858" y="71"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="Ho4-Y4-evI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shK-Sc-l8w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="NAp-AK-pwv"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="chickenleg" id="NAp-AK-pwv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uLG-KE-Q7a">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -79,11 +81,11 @@
             </objects>
             <point key="canvasLocation" x="92.799999999999997" y="-262.66866566716647"/>
         </scene>
-        <!--Item 2-->
+        <!--Upload-->
         <scene sceneID="7vS-dj-gMQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4w0-ec-lv2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="AeO-8A-xOP"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="upload" id="AeO-8A-xOP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEu-pZ-n4n">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -99,4 +101,8 @@
             <point key="canvasLocation" x="92.799999999999997" y="404.79760119940033"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chickenleg" width="24" height="25"/>
+        <image name="upload" width="25" height="25"/>
+    </resources>
 </document>

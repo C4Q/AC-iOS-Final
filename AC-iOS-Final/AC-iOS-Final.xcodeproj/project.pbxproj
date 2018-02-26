@@ -23,6 +23,10 @@
 		81CB10C2204480BE00EC4162 /* StorageService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10C1204480BE00EC4162 /* StorageService+Image.swift */; };
 		81CB10C52044AB6400EC4162 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10C42044AB6400EC4162 /* TabBarController.swift */; };
 		81CB10C72044AB9600EC4162 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CB10C62044AB9600EC4162 /* TabBar.storyboard */; };
+		81CB10C92044AEE100EC4162 /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10C82044AEE100EC4162 /* PostFeedViewController.swift */; };
+		81CB10CE2044B42B00EC4162 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10CD2044B42B00EC4162 /* PostCell.swift */; };
+		81CB10D02044B69300EC4162 /* PostsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10CF2044B69300EC4162 /* PostsFeedView.swift */; };
+		81CB10D32044BDD100EC4162 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB10D22044BDD100EC4162 /* AddPostViewController.swift */; };
 		E5508D1113DB6F1FFDA2C61B /* Pods_AC_iOS_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EE87ED1EAE9B4F282554A2 /* Pods_AC_iOS_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		81CB10C1204480BE00EC4162 /* StorageService+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageService+Image.swift"; sourceTree = "<group>"; };
 		81CB10C42044AB6400EC4162 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		81CB10C62044AB9600EC4162 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		81CB10C82044AEE100EC4162 /* PostFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewController.swift; sourceTree = "<group>"; };
+		81CB10CD2044B42B00EC4162 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		81CB10CF2044B69300EC4162 /* PostsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFeedView.swift; sourceTree = "<group>"; };
+		81CB10D22044BDD100EC4162 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		F004FA4B25B2304201FE322F /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,9 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				54915214203F335F009C7138 /* AppDelegate.swift */,
-				81CB10C42044AB6400EC4162 /* TabBarController.swift */,
-				54915216203F335F009C7138 /* LoginViewController.swift */,
 				81CB10B420446F3D00EC4162 /* Services */,
+				81CB10D12044BBA700EC4162 /* Views */,
 				81CB10BB20447C9700EC4162 /* Models */,
 				54915218203F335F009C7138 /* Main.storyboard */,
 				81CB10C62044AB9600EC4162 /* TabBar.storyboard */,
@@ -129,6 +136,7 @@
 			children = (
 				81CB10B520446F6100EC4162 /* Post.swift */,
 				81CB10B7204476CA00EC4162 /* AppUser.swift */,
+				81CB10CA2044B3D100EC4162 /* ViewControllers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +159,26 @@
 				81CB10C1204480BE00EC4162 /* StorageService+Image.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		81CB10CA2044B3D100EC4162 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				81CB10C42044AB6400EC4162 /* TabBarController.swift */,
+				81CB10D22044BDD100EC4162 /* AddPostViewController.swift */,
+				54915216203F335F009C7138 /* LoginViewController.swift */,
+				81CB10C82044AEE100EC4162 /* PostFeedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		81CB10D12044BBA700EC4162 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81CB10CD2044B42B00EC4162 /* PostCell.swift */,
+				81CB10CF2044B69300EC4162 /* PostsFeedView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CB10C92044AEE100EC4162 /* PostFeedViewController.swift in Sources */,
+				81CB10D32044BDD100EC4162 /* AddPostViewController.swift in Sources */,
 				81CB10B12044653F00EC4162 /* AuthUserService.swift in Sources */,
+				81CB10CE2044B42B00EC4162 /* PostCell.swift in Sources */,
 				81CB10B320446C1700EC4162 /* DBService.swift in Sources */,
 				81CB10C52044AB6400EC4162 /* TabBarController.swift in Sources */,
 				54915217203F335F009C7138 /* LoginViewController.swift in Sources */,
@@ -306,6 +337,7 @@
 				81CB10BA204477D200EC4162 /* DBService+User.swift in Sources */,
 				81CB10C020447FB700EC4162 /* StorageService.swift in Sources */,
 				81CB10BE20447CE100EC4162 /* DBService+Post.swift in Sources */,
+				81CB10D02044B69300EC4162 /* PostsFeedView.swift in Sources */,
 				81CB10C2204480BE00EC4162 /* StorageService+Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
