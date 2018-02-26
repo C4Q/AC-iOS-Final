@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>467105857500-oaqaj5ka0dogk8hrksshcc69d3fqs8b8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.467105857500-oaqaj5ka0dogk8hrksshcc69d3fqs8b8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA8RlOnybqZCORfzBciTPPUcDEf9xYVLrQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>467105857500</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>c4q.AC-iOS-Final</string>
+	<key>PROJECT_ID</key>
+	<string>meatly-iosfinal</string>
+	<key>STORAGE_BUCKET</key>
+	<string>meatly-iosfinal.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:467105857500:ios:96b1b3bc7fb95f5f</string>
+	<key>DATABASE_URL</key>
+	<string>https://meatly-iosfinal.firebaseio.com</string>
+</dict>
+</plist>
