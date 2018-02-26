@@ -19,13 +19,21 @@ class FirebaseDatabaseManager {
     let dbRef: DatabaseReference!
     let postRef: DatabaseReference!
     
-    func createPost(comment: String, image: UIImage) {
+    func createPost(comment: String,
+                    image: UIImage,
+                    completionHandler: @escaping (Error?) -> Void) {
         let child = postRef.childByAutoId()
         let post = Post(userID: FirebaseAuthManager.shared.getCurrentUser()!.uid, comment: comment, imgURL: "")
         let postJSON = post.toJSON()
         child.setValue(postJSON)
         // ADD IMAGE TO STORAGE
-        FirebaseStorageManager.shared.storeImage(uid: child.key, image: image)
+        FirebaseStorageManager.shared.storeImage(uid: child.key, image: image, completionHandler: { (error) in
+            if let error = error {
+                completionHandler(error)
+            } else {
+                completionHandler(nil)
+            }
+        })
     }
     
     

@@ -40,11 +40,17 @@ class LoginView: UIView {
     
     lazy public var loginButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("LOGIN / REGISTER", for: .normal)
+        button.setTitle("LOGIN", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         return button
     }()
     
+    lazy public var registerButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle("REGISTER", for: .normal)
+        button.setTitleColor(.blue, for: .normal)
+        return button
+    }()
     
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -71,6 +77,7 @@ extension LoginView {
         setupEmailTextField()
         setupPasswordTextField()
         setupLoginButton()
+        setupRegisterButton()
     }
     
     private func setupLogoImageView() {
@@ -107,6 +114,14 @@ extension LoginView {
             make.top.equalTo(passwordTextField.snp.bottom).offset(20)
             make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
             //make.width.equalTo(safeAreaLayoutGuide.snp.width).multipliedBy(0.75)
+        }
+    }
+    
+    private func setupRegisterButton() {
+        addSubview(registerButton)
+        registerButton.snp.makeConstraints { (make) in
+            make.top.equalTo(loginButton.snp.bottom).offset(20)
+            make.centerX.equalTo(safeAreaLayoutGuide.snp.centerX)
         }
     }
 }

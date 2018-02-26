@@ -19,6 +19,7 @@ class UploadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(uploadView)
+        uploadView.commentTextView.delegate = self
         configureNavBar()
         configureImageHandling()
         registerForKeyboardNotifications()
@@ -36,9 +37,15 @@ extension UploadViewController {
     @objc private func doneButtonTapped() {
         guard let image = uploadView.pickImageView.image else { return }
         guard let comment = uploadView.commentTextView.text else { return }
-        
         // POST TO FIREBASE
-        FirebaseDatabaseManager.shared.createPost(comment: comment, image: image)
+        FirebaseDatabaseManager.shared.createPost(comment: comment, image: image, completionHandler: { (error) in
+            if let error = error {
+                self.presentAlertWith(title: "Error", message: error.localizedDescription)
+            } else {
+                self.presentAlertWith(title: "Success", message: "You have posted")
+            }
+            
+        })
     }
 }
 
@@ -69,6 +76,13 @@ extension UploadViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
 }
 
+// MARK: - Text view delegate
+extension UploadViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+}
+
 // MARK: - Keyboard Handling
 extension UploadViewController {
     private func registerForKeyboardNotifications() {
@@ -77,15 +91,27 @@ extension UploadViewController {
     }
 
     @objc private func keyboardWasShown(aNotification: NSNotification) {
-        print("keyboard shown")
         let info: NSDictionary = aNotification.userInfo! as NSDictionary
         let kbSize = info.object(forKey: "UIKeyboardFrameEndUserInfoKey") as! CGRect
-        print(kbSize)
         // Move view up by height
+        animateViewUp(by: kbSize.height)
     }
 
     @objc private func keyboardWillBeHidden() {
-        print("keyboard hidden")
         // Return view to normal
+        animateViewDown()
+    }
+    
+    private func animateViewUp(by height: CGFloat) {
+        UIView.animate(withDuration: 0.2) {
+            self.view.transform = CGAffineTransform.init(translationX: 0, y: -height)
+        }
+    }
+    
+    private func animateViewDown() { //by height: CGFloat
+        UIView.animate(withDuration: 0.2) {
+            self.view.transform = CGAffineTransform.identity
+        }
+
     }
 }

@@ -25,6 +25,7 @@
 		81E87DA3204463D300C79A37 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA2204463D300C79A37 /* UIViewController+Extensions.swift */; };
 		81E87DA6204469A700C79A37 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */; };
 		81E87DA820446D0C00C79A37 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA720446D0C00C79A37 /* AppSettings.swift */; };
+		81E87DAA204496D500C79A37 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E87DA9204496D500C79A37 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		81E87DA2204463D300C79A37 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		81E87DA720446D0C00C79A37 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		81E87DA9204496D500C79A37 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		B5BD00BBCC0C2E65A964870D /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
 		D081676FC39ACDBA1CD15009 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				81E87D932044603000C79A37 /* FeedView.swift */,
 				81E87D952044603A00C79A37 /* UploadView.swift */,
 				81E87DA5204469A600C79A37 /* PostCollectionViewCell.swift */,
+				81E87DA9204496D500C79A37 /* PostTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				81E87D8B20445EB800C79A37 /* LoginViewController.swift in Sources */,
 				81E87D992044606A00C79A37 /* FirebaseDatabaseManager.swift in Sources */,
+				81E87DAA204496D500C79A37 /* PostTableViewCell.swift in Sources */,
 				81E87DA820446D0C00C79A37 /* AppSettings.swift in Sources */,
 				81E87D9D2044608100C79A37 /* FirebaseStorageManager.swift in Sources */,
 				81E87D8F2044600800C79A37 /* UploadViewController.swift in Sources */,

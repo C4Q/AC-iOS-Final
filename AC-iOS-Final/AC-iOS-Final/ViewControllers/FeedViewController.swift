@@ -16,7 +16,8 @@ class FeedViewController: UIViewController {
     
     var posts = [Post]() {
         didSet {
-            feedView.feedCollectionView.reloadData()
+            //feedView.feedCollectionView.reloadData()
+            feedView.feedTableView.reloadData()
         }
     }
     
@@ -24,8 +25,10 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(feedView)
-        feedView.feedCollectionView.dataSource = self
-        feedView.feedCollectionView.delegate = self
+        //feedView.feedCollectionView.dataSource = self
+        //feedView.feedCollectionView.delegate = self
+        feedView.feedTableView.dataSource = self
+        feedView.feedTableView.delegate = self
         configureNavBar()
     }
     
@@ -58,6 +61,31 @@ extension FeedViewController {
         navigationItem.title = "Home Feed"
     }
 }
+
+extension FeedViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+        let post = posts[indexPath.row]
+        cell.postImageView.kf.indicatorType = .activity
+        cell.postImageView.kf.setImage(with: URL(string: post.imgURL)!, placeholder: #imageLiteral(resourceName: "camera_icon"), options: nil, progressBlock: nil, completionHandler: nil)
+        cell.commentLabel.text = post.comment
+        cell.selectionStyle = .none
+        cell.setNeedsDisplay()
+        return cell
+    }
+    
+
+}
+
+extension FeedViewController: UITableViewDelegate {
+
+}
+
+/*
 
 // MARK: - Collection view data source
 extension FeedViewController: UICollectionViewDataSource {
@@ -101,3 +129,5 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: AppSettings.padding, left: AppSettings.padding, bottom: AppSettings.padding, right: AppSettings.padding)
     }
 }
+
+ */

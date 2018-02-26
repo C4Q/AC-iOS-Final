@@ -1,5 +1,5 @@
 //
-//  PostCollectionViewCell.swift
+//  PostTableViewCell.swift
 //  AC-iOS-Final
 //
 //  Created by Reiaz Gafar on 2/26/18.
@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import SnapKit
 
-class PostCollectionViewCell: UICollectionViewCell {
-    
+class PostTableViewCell: UITableViewCell {
+
     // MARK: - Properties
     lazy public var postImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .lightGray
         imageView.image = #imageLiteral(resourceName: "camera_icon")
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -24,14 +23,13 @@ class PostCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = ""
-        label.textAlignment = .left
-        label.preferredMaxLayoutWidth = frame.size.width
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
-
+    
     // MARK: - Inits
-    override init(frame: CGRect) {
-        super.init(frame: UIScreen.main.bounds)
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
     
@@ -44,32 +42,34 @@ class PostCollectionViewCell: UICollectionViewCell {
         backgroundColor = .white
         setupViews()
     }
-    
+
 }
 
 // MARK: - Autolayout
-extension PostCollectionViewCell {
+extension PostTableViewCell {
     private func setupViews() {
-        setupPostImageView()
         setupCommentLabel()
-    }
-    
-    private func setupPostImageView() {
-        addSubview(postImageView)
-        postImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(snp.top)
-            make.leading.equalTo(snp.leading)
-            make.trailing.equalTo(snp.trailing)
-        }
+        setupPostImageView()
     }
     
     private func setupCommentLabel() {
         addSubview(commentLabel)
         commentLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(postImageView.snp.bottom).offset(AppSettings.padding)
+            make.bottom.equalTo(snp.bottom)
             make.leading.equalTo(snp.leading).offset(AppSettings.padding)
             make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
-            make.bottom.equalTo(snp.bottom).offset(AppSettings.padding)
         }
     }
+    
+    private func setupPostImageView() {
+        addSubview(postImageView)
+        postImageView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(commentLabel.snp.top).offset(20)
+            make.leading.equalTo(snp.leading)
+            make.trailing.equalTo(snp.trailing)
+            make.top.equalTo(snp.top)
+        }
+    }
+    
+
 }

@@ -23,7 +23,9 @@ class FirebaseStorageManager {
     private var storageRef: StorageReference!
     private var imagesRef: StorageReference!
     
-    func storeImage(uid: String, image: UIImage) {
+    func storeImage(uid: String,
+                    image: UIImage,
+                    completionHandler: @escaping (Error?) -> Void) {
         
         let sizeOfImage: CGSize = CGSize(width: 200, height: 200)
         let toucanImage = Toucan.Resize.resizeImage(image, size: sizeOfImage) ?? #imageLiteral(resourceName: "camera_icon")
@@ -62,11 +64,12 @@ class FirebaseStorageManager {
             let imageURL = String(describing: snapshot.metadata!.downloadURL()!)
             Database.database().reference(withPath: "posts").child(uid).child("imgURL").setValue(imageURL)
             
-            
+            completionHandler(nil)
         }
         
         uploadTask.observe(.failure) { snapshot in
             if let error = snapshot.error as NSError? {
+                completionHandler(error)
                 switch (StorageErrorCode(rawValue: error.code)!) {
                 case .objectNotFound:
                     // File doesn't exist

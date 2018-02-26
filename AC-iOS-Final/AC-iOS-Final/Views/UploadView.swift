@@ -21,7 +21,10 @@ class UploadView: UIView {
     
     lazy public var commentTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "Add a comment"
+        textView.text = "Add a comment..."
+        textView.font = AppSettings.bodyFont
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = UIColor.black.cgColor
         return textView
     }()
     
