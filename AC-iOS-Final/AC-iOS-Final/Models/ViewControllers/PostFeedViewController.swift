@@ -40,9 +40,9 @@ class PostFeedViewController: UIViewController {
                 }
             }
             // filter out current user's job posts
-            self.posts = posts
+            self.posts = posts.reversed()
 //            self.posts = posts.filter{ $0.userId != AuthUserService.getCurrentUser()?.uid }
-                .sorted{ $0.dateCreated < $1.dateCreated }
+//                .sorted{ $0.dateCreated < $1.dateCreated }
         }
     }
     
