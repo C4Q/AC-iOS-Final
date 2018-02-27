@@ -11,7 +11,7 @@ import UIKit
 
 
 extension DBService {
-    public func addPost(comment: String, image: UIImage) {
+    public func addPost(comment: String, image: UIImage, completion: @escaping (_ didAddPost: Bool) -> Void) {
         let childByAutoId = DBService.manager.getPosts().childByAutoId()
         guard let userId = AuthUserService.getCurrentUser()?.uid else { fatalError("uid is nil")}
         childByAutoId.setValue(["postID"         : childByAutoId.key,
@@ -23,8 +23,13 @@ extension DBService {
                                         print("Post added to database reference: \(dbRef)")
                                         
                                         // add an image to storage
-                                        StorageService.manager.storeImage(image: image, postID: childByAutoId.key)
-                                      
+                                        StorageService.manager.storeImage(image: image, postID: childByAutoId.key, completion: {(didStoreImage) in
+                                            if didStoreImage {
+                                                completion(true)
+                                            } else {
+                                                completion(false)
+                                            }
+                                        })
                                     }
         }
     }

@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -111,25 +113,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="375.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-nY-jD0">
-                                                    <rect key="frame" x="32" y="26" width="300" height="263"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-nY-jD0">
+                                                    <rect key="frame" x="19" y="31" width="337.5" height="262.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-Fu-8nV">
-                                                    <rect key="frame" x="32" y="311" width="300" height="52.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="246" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-Fu-8nV">
+                                                    <rect key="frame" x="35" y="313.5" width="305" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="width" secondItem="gqS-b2-e2K" secondAttribute="width" multiplier="0.8" id="2sj-fg-lqN"/>
-                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="top" secondItem="o7c-nY-jD0" secondAttribute="bottom" constant="22" id="K9M-ec-pQx"/>
-                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="top" secondItem="gqS-b2-e2K" secondAttribute="top" constant="26" id="Nzp-Sg-xJj"/>
-                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="height" secondItem="o7c-nY-jD0" secondAttribute="height" multiplier="0.2" id="fbV-fi-QYW"/>
-                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="height" secondItem="gqS-b2-e2K" secondAttribute="height" multiplier="0.7" id="g3o-Hx-ZV4"/>
-                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="width" secondItem="o7c-nY-jD0" secondAttribute="width" id="jHa-W9-pal"/>
-                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="leading" secondItem="gqS-b2-e2K" secondAttribute="leading" constant="32" id="quB-XA-YMy"/>
-                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="leading" secondItem="gqS-b2-e2K" secondAttribute="leading" constant="32" id="zdJ-fe-FE9"/>
+                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="centerX" secondItem="gqS-b2-e2K" secondAttribute="centerX" id="17W-CH-a2b"/>
+                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="top" secondItem="o7c-nY-jD0" secondAttribute="bottom" constant="20" id="DuI-5Y-Ue3"/>
+                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="top" secondItem="gqS-b2-e2K" secondAttribute="topMargin" constant="20" id="GgT-Ze-y4x"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hh8-Fu-8nV" secondAttribute="bottom" constant="20" id="KMN-h2-ihM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hh8-Fu-8nV" secondAttribute="trailing" constant="20" id="P4K-wK-aTV"/>
+                                                <constraint firstItem="hh8-Fu-8nV" firstAttribute="leading" secondItem="gqS-b2-e2K" secondAttribute="leadingMargin" constant="20" id="boq-v1-y0i"/>
+                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="width" secondItem="gqS-b2-e2K" secondAttribute="width" multiplier="0.9" id="l8V-BS-tMS"/>
+                                                <constraint firstItem="o7c-nY-jD0" firstAttribute="height" secondItem="gqS-b2-e2K" secondAttribute="width" multiplier="0.7" priority="999" id="mHm-03-ZQb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

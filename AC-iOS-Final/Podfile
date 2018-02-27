@@ -13,5 +13,7 @@ target 'AC-iOS-Final' do
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
     pod 'Firebase/Storage'
+    pod 'Kingfisher'
+    pod 'Toucan'
 
 end

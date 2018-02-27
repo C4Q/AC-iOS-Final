@@ -8,10 +8,12 @@
 
 import UIKit
 import AVFoundation
+import SVProgressHUD
 
 class UploadViewController: UIViewController {
 
     let feedVC = FeedViewController()
+    let invisibleViewController = UIViewController()
     
     @IBOutlet weak var accessPhotoLibrary: UIButton!
     @IBOutlet weak var imageView: UIImageView!
@@ -35,7 +37,27 @@ class UploadViewController: UIViewController {
         guard let image = currentSelectedImage else { print("don't have an image"); return }
         guard let comment = comment.text else { print("title is nil"); return }
         guard !comment.isEmpty else { print("title is empty"); return }
-        DBService.manager.addPost(comment: comment, image: image)
+        SVProgressHUD.show()
+        invisibleViewController.modalPresentationStyle = .overFullScreen
+        present(invisibleViewController, animated: true, completion: nil)
+        DBService.manager.addPost(comment: comment, image: image) { (didAddPost) in
+            if didAddPost == true {
+                let alert = UIAlertController(title: "Post Added", message: nil, preferredStyle: .alert)
+                let action = UIAlertAction.init(title: "Ok", style: .default , handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                SVProgressHUD.dismiss()
+                self.invisibleViewController.dismiss(animated: true, completion: nil)
+            }
+            else {
+                let alert = UIAlertController(title: "Could not add post", message: nil, preferredStyle: .alert)
+                let action = UIAlertAction.init(title: "Ok", style: .default , handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                SVProgressHUD.dismiss()
+                self.invisibleViewController.dismiss(animated: true, completion: nil)
+            }
+        }
         //dismiss(animated: true, completion: nil)
     }
     

@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AC-iOS-Final/ViewControllers/UploadViewController.swift"
-            timestampString = "541378409.202399"
+            timestampString = "541385298.0515029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "PostButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,29 +74,135 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AC-iOS-Final/ViewControllers/UploadViewController.swift"
-            timestampString = "541378409.202467"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "PostButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AC-iOS-Final/ViewControllers/UploadViewController.swift"
-            timestampString = "541378409.202511"
+            timestampString = "541385298.052147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "PostButton(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AC-iOS-Final/Model/Model/Post.swift"
+            timestampString = "541384408.859907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(postDict:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AC_iOS_Final.Post.init(postDict: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; AC_iOS_Final.Post"
+                  moduleName = "AC-iOS-Final"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/exams/AC-iOS-Final/AC-iOS-Final/AC-iOS-Final/Model/Model/Post.swift"
+                  timestampString = "541384389.836737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in AC_iOS_Final.Post.init(postDict: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; AC_iOS_Final.Post"
+                  moduleName = "AC-iOS-Final"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/exams/AC-iOS-Final/AC-iOS-Final/AC-iOS-Final/Model/Model/Post.swift"
+                  timestampString = "541384389.8393331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AC-iOS-Final/Storage/StorageService+Image.swift"
+            timestampString = "541385298.052443"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "storeImage(image:postID:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AC-iOS-Final/ViewControllers/UploadViewController.swift"
+            timestampString = "541385298.052642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "PostButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AC_iOS_Final.UploadViewController.PostButton(__ObjC.UIBarButtonItem) -&gt; ()"
+                  moduleName = "AC-iOS-Final"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/exams/AC-iOS-Final/AC-iOS-Final/AC-iOS-Final/ViewControllers/UploadViewController.swift"
+                  timestampString = "541384389.849579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "639">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in AC_iOS_Final.UploadViewController.PostButton(__ObjC.UIBarButtonItem) -&gt; ()"
+                  moduleName = "AC-iOS-Final"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/c4q/Desktop/exams/AC-iOS-Final/AC-iOS-Final/AC-iOS-Final/ViewControllers/UploadViewController.swift"
+                  timestampString = "541384389.852682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
