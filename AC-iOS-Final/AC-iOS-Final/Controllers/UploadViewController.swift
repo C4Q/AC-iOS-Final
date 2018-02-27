@@ -10,13 +10,11 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class UploadViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UploadViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var feedPic: UIImageView!
     @IBOutlet weak var commentTextView: UITextView!
-    @IBOutlet var picTapGesture: UITapGestureRecognizer!
-    @IBOutlet weak var addImageButton: UIBarButtonItem!
     
     let picker = UIImagePickerController()
     
@@ -24,85 +22,76 @@ class UploadViewController: UIViewController, UITextViewDelegate, UIImagePickerC
         super.viewDidLoad()
         picker.delegate = self
         commentTextView.delegate = self
-        
-        //feedPic.addGestureRecognizer(tapGesture)
-        
+        configureFeedPicGesture()
     }
     
-    //MARK: -Image Picker setup
-    @IBAction func addImageTapped(_ sender: UIBarButtonItem) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(picker, animated: true, completion: nil)
+    @IBAction private func doneTapped(_ sender: UIBarButtonItem) {
+            guard let image = feedPic.image else { return }
+            guard let comment = commentTextView.text else { return }
+            commentTextView.resignFirstResponder()
         
-    }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        feedPic.contentMode = .scaleAspectFit //3
-        feedPic.image = chosenImage //4
-        dismiss(animated:true, completion: nil) //5
-        
-        var data = Data()
-        data = UIImageJPEGRepresentation(chosenImage, 0.8)!
-        
-        let storage = Storage.storage()
-        let storageRef = storage.reference()
-        
-        let imageRef = storageRef.child("images")
-        
-        _ = imageRef.putData(data, metadata: nil) { (metadata, error) in
-            guard let metadata = metadata else {
-                // Uh-oh, an error occurred!
-                return
-            }
-            // Metadata contains file metadata such as size, content-type, and download URL.
-            let downloadURL = metadata.downloadURL
-            print(downloadURL)
-            
-            let key =  Database.database().reference().childByAutoId().key
-            let image = ["url" : downloadURL()?.absoluteString]
-            
-            let childUpdates = ["\(key)" : image]
-            
-        }
-        
-    }
-    
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    //MARK: - Send data to storage and database
-
-    
-    func uploadCommentsToDB() {
-        //TODO UPLOAD COMMENTS to FB
-        let commentsDB = Database.database().reference().child("Posts")
-        //save the users message as a dictionary
-        let commentsDictionary = ["comment" : commentTextView.text,
-                                  "userID" : Auth.auth().currentUser?.uid]
-        
-        commentsDB.childByAutoId().setValue(commentsDictionary) { (error, reference) in
-            if error != nil {
-                print(error!)
-            } else {
-                print("message saved successfully!")
+            // Post to firebase
+            DatabaseManager.shared.createPost(comment: comment, image: image, completionHandler: { (error) in
+                if let error = error {
+                    self.showOKAlert(title: "Error", message: "error: \(error.localizedDescription)")
+                } else {
+                    self.showOKAlert(title: "Success", message: "You have posted")
+                }
                 
-            }
+            })
+        
+        commentTextView.text = "Enter Comment Here..."
+        
         }
+    
+    private func showOKAlert(title: String, message: String?, dismissCompletion: ((UIAlertAction) -> Void)? = nil, completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel, handler: dismissCompletion)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: completion)
+    }
     }
 
+//MARK: -Image Picker setup
+extension UploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBAction func doneTapped(_ sender: UIBarButtonItem) {
-        uploadCommentsToDB()
-        
-        
+    //Setup tap gesture recognizer for imageview
+    func configureFeedPicGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(feedPicTapped))
+        feedPic.addGestureRecognizer(tap)
+        feedPic.isUserInteractionEnabled = true
     }
     
+    @objc private func feedPicTapped() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.allowsEditing = false //true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    // Get image from library + set new feedPic
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        var newImage: UIImage
+        
+        if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            newImage = possibleImage
+        } else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            newImage = possibleImage
+        } else {
+            return
+        }
+        
+        feedPic.image = newImage
+        dismiss(animated: true)
+        
+//        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//        feedPic.contentMode = .scaleAspectFit
+//        feedPic.image = chosenImage
+//        dismiss(animated:true, completion: nil)
+//        }
+    }
 }
+
 

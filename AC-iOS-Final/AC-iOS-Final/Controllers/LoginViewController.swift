@@ -61,6 +61,8 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: EmailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
                 print(error!)
+                SVProgressHUD.dismiss()
+                self.showOKAlert(title: "Error", message: error?.localizedDescription)
                 
             } else {
                 //success
@@ -71,11 +73,10 @@ class LoginViewController: UIViewController {
                     })
                 }
                 else {
+                    SVProgressHUD.dismiss()
                     self.showOKAlert(title: "Error", message: error?.localizedDescription)
                 }
-                
                 SVProgressHUD.dismiss()
-                //self.performSegue(withIdentifier: "goToChat", sender: self)
             }
         }
     }

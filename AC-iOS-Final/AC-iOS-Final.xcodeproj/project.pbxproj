@@ -18,9 +18,10 @@
 		81DED43F204464F800F09D0C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED43E204464F800F09D0C /* UploadViewController.swift */; };
 		81DED44220446F6800F09D0C /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44020446F6800F09D0C /* FeedTableViewCell.swift */; };
 		81DED44320446F6800F09D0C /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81DED44120446F6800F09D0C /* FeedTableViewCell.xib */; };
-		81DED4462044710700F09D0C /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED4452044710700F09D0C /* Posts.swift */; };
-		81DED44C2044C0AA00F09D0C /* StorageService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */; };
-		81DED44D2044C0AA00F09D0C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44B2044C0AA00F09D0C /* StorageService.swift */; };
+		81DED4462044710700F09D0C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED4452044710700F09D0C /* Post.swift */; };
+		81DED44F2044F72600F09D0C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED44E2044F72600F09D0C /* DatabaseManager.swift */; };
+		81DED4512044F78A00F09D0C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED4502044F78A00F09D0C /* AuthManager.swift */; };
+		81DED4532044F7BB00F09D0C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DED4522044F7BB00F09D0C /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +39,10 @@
 		81DED43E204464F800F09D0C /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		81DED44020446F6800F09D0C /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		81DED44120446F6800F09D0C /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
-		81DED4452044710700F09D0C /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
-		81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageService+Image.swift"; sourceTree = "<group>"; };
-		81DED44B2044C0AA00F09D0C /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		81DED4452044710700F09D0C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		81DED44E2044F72600F09D0C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		81DED4502044F78A00F09D0C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		81DED4522044F7BB00F09D0C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		9A10EB7C81C47EB4B76BD6A8 /* Pods-AC-iOS-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.release.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,10 +79,10 @@
 		54915213203F335F009C7138 /* AC-iOS-Final */ = {
 			isa = PBXGroup;
 			children = (
-				81DED4492044C07400F09D0C /* Services */,
-				81DED44420446F7400F09D0C /* View */,
-				81DED4392044636600F09D0C /* Controllers */,
 				81DED4382044635900F09D0C /* Models */,
+				81DED44420446F7400F09D0C /* Views */,
+				81DED4392044636600F09D0C /* Controllers */,
+				81DED4492044C07400F09D0C /* Services */,
 				81DED43520445F1100F09D0C /* Supporting Files */,
 				54915220203F335F009C7138 /* Info.plist */,
 				81DED43620445FB700F09D0C /* GoogleService-Info.plist */,
@@ -109,7 +111,7 @@
 		81DED4382044635900F09D0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				81DED4452044710700F09D0C /* Posts.swift */,
+				81DED4452044710700F09D0C /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,21 +126,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		81DED44420446F7400F09D0C /* View */ = {
+		81DED44420446F7400F09D0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				54915218203F335F009C7138 /* Main.storyboard */,
 				81DED44020446F6800F09D0C /* FeedTableViewCell.swift */,
 				81DED44120446F6800F09D0C /* FeedTableViewCell.xib */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		81DED4492044C07400F09D0C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				81DED44B2044C0AA00F09D0C /* StorageService.swift */,
-				81DED44A2044C0AA00F09D0C /* StorageService+Image.swift */,
+				81DED44E2044F72600F09D0C /* DatabaseManager.swift */,
+				81DED4502044F78A00F09D0C /* AuthManager.swift */,
+				81DED4522044F7BB00F09D0C /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -235,7 +238,9 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -244,7 +249,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -294,13 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DED43B2044642C00F09D0C /* LoginViewController.swift in Sources */,
-				81DED44C2044C0AA00F09D0C /* StorageService+Image.swift in Sources */,
-				81DED4462044710700F09D0C /* Posts.swift in Sources */,
+				81DED4512044F78A00F09D0C /* AuthManager.swift in Sources */,
+				81DED4462044710700F09D0C /* Post.swift in Sources */,
+				81DED4532044F7BB00F09D0C /* StorageManager.swift in Sources */,
 				81DED43F204464F800F09D0C /* UploadViewController.swift in Sources */,
 				81DED43D204464E200F09D0C /* FeedViewController.swift in Sources */,
-				81DED44D2044C0AA00F09D0C /* StorageService.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,
 				81DED44220446F6800F09D0C /* FeedTableViewCell.swift in Sources */,
+				81DED44F2044F72600F09D0C /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
