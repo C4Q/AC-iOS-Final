@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Unit6Final-staGram-->
+        <scene sceneID="1bh-lK-LPC">
+            <objects>
+                <viewController id="nvk-iL-K7D" customClass="AddPostViewController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbO-gk-ONN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-cD-sok">
+                                <rect key="frame" x="15" y="413" width="375" height="220"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koN-uI-i4m">
+                                <rect key="frame" x="-1" y="64" width="375" height="334"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-is-1XF">
+                                <rect key="frame" x="172" y="204" width="114" height="55"/>
+                                <state key="normal" title="cameraButton" image="camera_icon"/>
+                                <connections>
+                                    <action selector="showPhotpLibraryWith_sender:" destination="nvk-iL-K7D" eventType="touchUpInside" id="AgR-l4-maE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d9H-is-1XF" firstAttribute="centerX" secondItem="koN-uI-i4m" secondAttribute="centerX" id="1Ef-jF-8SB"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="leading" secondItem="RR3-Xp-MZR" secondAttribute="leading" constant="15" id="9AX-Vs-VgA"/>
+                            <constraint firstItem="d9H-is-1XF" firstAttribute="centerY" secondItem="koN-uI-i4m" secondAttribute="centerY" id="OBC-dR-9H5"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="bottom" secondItem="RR3-Xp-MZR" secondAttribute="bottom" constant="15" id="V3E-rJ-pci"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="top" secondItem="koN-uI-i4m" secondAttribute="bottom" constant="15" id="Xan-7N-hLt"/>
+                            <constraint firstItem="xjE-cD-sok" firstAttribute="trailing" secondItem="RR3-Xp-MZR" secondAttribute="trailing" constant="15" id="ZXR-bW-kJY"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="width" secondItem="jbO-gk-ONN" secondAttribute="width" id="r3U-x0-gwv"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="height" secondItem="jbO-gk-ONN" secondAttribute="height" multiplier="0.5" id="rKR-yw-Uvx"/>
+                            <constraint firstItem="koN-uI-i4m" firstAttribute="top" secondItem="RR3-Xp-MZR" secondAttribute="top" id="t6v-Le-HC3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RR3-Xp-MZR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Unit6Final-staGram" id="LV1-5a-GPN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4Ki-uR-IUb">
+                            <connections>
+                                <action selector="done:" destination="nvk-iL-K7D" id="ceL-KO-KeN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoLibraryButton" destination="d9H-is-1XF" id="6kE-dd-aXk"/>
+                        <outlet property="postComment" destination="xjE-cD-sok" id="MQZ-ff-8TC"/>
+                        <outlet property="postImage" destination="koN-uI-i4m" id="SZc-kJ-QlI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lop-Rn-OKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.8" y="423.23838080959524"/>
+        </scene>
+        <!--Post Feed View Controller-->
+        <scene sceneID="Et3-cX-4Ey">
+            <objects>
+                <viewController storyboardIdentifier="PostFeedViewController" id="Jtr-8n-zVH" customClass="PostFeedViewController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgw-5y-oXF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dcV-Um-26P"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EhF-67-hSt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1r-kh-7Qt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="-263"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4Fj-4b-jiX">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="c6W-Wd-GhO" customClass="TabBarController" customModule="AC_iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FYB-eU-R8t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="shK-Sc-l8w" kind="relationship" relationship="viewControllers" id="6zC-Zd-JbO"/>
+                        <segue destination="4w0-ec-lv2" kind="relationship" relationship="viewControllers" id="fTs-78-KiU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ww-Oz-4aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="71"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="Ho4-Y4-evI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shK-Sc-l8w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" image="chickenleg" id="NAp-AK-pwv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uLG-KE-Q7a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jtr-8n-zVH" kind="relationship" relationship="rootViewController" id="Edb-Mq-L9H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVS-lx-3Dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.799999999999997" y="-262.66866566716647"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="7vS-dj-gMQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4w0-ec-lv2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upload" image="upload" id="AeO-8A-xOP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEu-pZ-n4n">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nvk-iL-K7D" kind="relationship" relationship="rootViewController" id="IS1-4e-wop"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhP-43-7Ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.799999999999997" y="404.79760119940033"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon" width="60" height="55"/>
+        <image name="chickenleg" width="24" height="25"/>
+        <image name="upload" width="25" height="25"/>
+    </resources>
+</document>
