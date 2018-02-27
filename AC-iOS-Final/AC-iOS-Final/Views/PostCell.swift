@@ -51,26 +51,8 @@ class PostCell: UICollectionViewCell {
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(deleteAction))
         addGestureRecognizer(longPressGesture)
         setupViews()
-        configureAccessability()
     }
-    
-    //accessability
-    private func configureAccessability() {
-        isAccessibilityElement = true
-        postCreator.isAccessibilityElement = false
-        postComment.isAccessibilityElement = false
-        //the sign in the middle is "for-in" syntax. It just adds on to a value instead of overriding it
-        accessibilityTraits |= UIAccessibilityTraitButton
-        accessibilityLabel = postComment.text
-        
-        let customAction = UIAccessibilityCustomAction(name:"Delete", target: self, selector:#selector(deleteCellAction))
-        accessibilityCustomActions = [customAction]
-    }
-    
-    @objc func deleteCellAction() -> Bool {
-        // code for initiating cell delete
-        return true
-    }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -80,18 +62,18 @@ class PostCell: UICollectionViewCell {
 // MARK:- Setup Views
 extension PostCell {
     private func setupViews() {
-        setupPostComment()
-        setupPostImage()
         setupPostCreator()
+        setupPostImage()
+        setupPostComment()
     }
     
     private func setupPostComment() {
         let padding: CGFloat = 16
         addSubview(postComment)
         postComment.snp.makeConstraints { (make) in
-            make.top.equalTo(snp.top).offset(padding)
             make.leading.equalTo(snp.leading).offset(padding)
             make.trailing.equalTo(snp.trailing).offset(-padding)
+            make.bottom.equalTo(snp.bottom).offset(-padding)
         }
     }
     
@@ -99,7 +81,7 @@ extension PostCell {
         let padding: CGFloat = 16
         addSubview(postImage)
         postImage.snp.makeConstraints { (make) in
-            make.top.equalTo(postComment.snp.bottom).offset(padding)
+            make.top.equalTo(postCreator.snp.bottom).offset(padding)
             make.leading.equalTo(snp.leading).offset(padding)
             make.trailing.equalTo(snp.trailing).offset(-padding)
             make.bottom.equalTo(snp.bottom).offset(-padding * 2)
@@ -110,9 +92,10 @@ extension PostCell {
         let padding: CGFloat = 16
         addSubview(postCreator)
         postCreator.snp.makeConstraints { (make) in
+            make.top.equalTo(snp.top).offset(padding)
             make.leading.equalTo(snp.leading).offset(padding)
             make.trailing.equalTo(snp.trailing).offset(-padding)
-            make.bottom.equalTo(snp.bottom).offset(-padding)
+            
         }
     }
     
@@ -129,7 +112,7 @@ extension PostCell {
     }
     
     @objc private func deleteAction() {
-        if currentPost.userId != AuthUserService.getCurrentUser()?.uid { print("not job creator"); return }
+        if currentPost.userId != AuthUserService.getCurrentUser()?.uid { print("not post creator"); return }
         delegate?.postCellDeleteAction(self, post: currentPost)
     }
 }

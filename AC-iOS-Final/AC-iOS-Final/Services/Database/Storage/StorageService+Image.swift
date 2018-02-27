@@ -46,7 +46,7 @@ extension StorageService {
             let imageURL = String(describing: snapshot.metadata!.downloadURL()!)
             DBService.manager.getPosts().child("\(postId)/imageURL").setValue(imageURL)
             
-            //DBService.manager.getPosts().child("\(postId)").updateChildValues(["imageURL" :  imageURL])
+//            DBService.manager.getPosts().child("\(postId)").updateChildValues(["imageURL" :  imageURL])
         }
         
         uploadTask.observe(.failure) { snapshot in

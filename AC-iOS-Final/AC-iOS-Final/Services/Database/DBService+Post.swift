@@ -25,7 +25,7 @@ extension DBService {
                                     } else {
                                         print("post added to database reference: \(dbRef)")
 //                                        add an image to storage
-                                        
+                                        StorageService.manager.storeImage(image: image, postId: childByAutoId.key)
                                     }
                                     
         }
