@@ -50,6 +50,12 @@ class LoginViewController: UIViewController {
     
     }
     
+    static public func storyboardInstance() -> LoginViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        return vc
+    }
+    
     
 }
 

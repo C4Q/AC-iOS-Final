@@ -40,6 +40,22 @@ class FeedTableViewController: UITableViewController {
     
     
     
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Log Out", message: "are you sure you want to log out?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alert) in
+            AuthUserService.manager.signOut()
+            self.present(LoginViewController.storyboardInstance(), animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
 
     // MARK: - Table view data source
 
@@ -53,8 +69,7 @@ class FeedTableViewController: UITableViewController {
         let postToSet = posts[indexPath.row]
         cell.feedCaption.text = postToSet.caption
         let imgURL = postToSet.imageUrl
-        let imgStr = imgURL
-        let url = URL(string: imgStr)
+        let url = URL(string: imgURL)
         cell.feedPicture.kf.indicatorType = .activity
         cell.feedPicture.kf.setImage(with: url)
         return cell
