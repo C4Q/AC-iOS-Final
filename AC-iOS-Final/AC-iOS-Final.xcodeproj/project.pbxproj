@@ -13,6 +13,7 @@
 		54915227203F339A009C7138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54915226203F339A009C7138 /* Assets.xcassets */; };
 		C40FB1752044B0D100C56E6A /* UIViewController+Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */; };
 		C415A558204485C900ADDB08 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C415A557204485C900ADDB08 /* FeedCell.swift */; };
+		C44B68852046847500967D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44B68842046847400967D8A /* GoogleService-Info.plist */; };
 		C47BA7CA204475FF008A1D83 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BA7C9204475FF008A1D83 /* Post.swift */; };
 		C47BA7CD20447989008A1D83 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BA7CC20447989008A1D83 /* FeedVC.swift */; };
 		C48404BE2044832C00449B98 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48404BD2044832C00449B98 /* FeedView.swift */; };
@@ -24,7 +25,6 @@
 		C49DD19620445DDF00C4ACB7 /* AZTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */; };
 		C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19720445E5900C4ACB7 /* Stylesheet.swift */; };
 		C49DD19A20445E6E00C4ACB7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */; };
-		C49DD19E2044618C00C4ACB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */; };
 		C49DD1A0204461F500C4ACB7 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD19F204461F500C4ACB7 /* LoginCoordinator.swift */; };
 		C49DD1AF204465BA00C4ACB7 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A3204465BA00C4ACB7 /* AuthClient.swift */; };
 		C49DD1B0204465BA00C4ACB7 /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1A4204465BA00C4ACB7 /* AuthDelegate.swift */; };
@@ -36,6 +36,8 @@
 		C49DD1B6204465BA00C4ACB7 /* StorageService+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AC204465BA00C4ACB7 /* StorageService+Image.swift */; };
 		C49DD1B7204465BA00C4ACB7 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AD204465BA00C4ACB7 /* StorageService.swift */; };
 		C49DD1B8204465BA00C4ACB7 /* ToolbarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD1AE204465BA00C4ACB7 /* ToolbarDelegate.swift */; };
+		C4B67BFB20466F5E001F9A45 /* UIApplication+topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B67BFA20466F5E001F9A45 /* UIApplication+topViewController.swift */; };
+		C4B67BFD20468145001F9A45 /* UIAlertController+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B67BFC20468145001F9A45 /* UIAlertController+Factory.swift */; };
 		C4F1500E20446DAB00E225F6 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1500D20446DAB00E225F6 /* UploadView.swift */; };
 		FEFCE4E14F7DCAD81F0681AC /* Pods_AC_iOS_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8763BC2D2113D2D748996E57 /* Pods_AC_iOS_Final.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,7 @@
 		956B37A7642E1B92E05B2426 /* Pods-AC-iOS-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AC-iOS-Final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AC-iOS-Final/Pods-AC-iOS-Final.debug.xcconfig"; sourceTree = "<group>"; };
 		C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nav.swift"; sourceTree = "<group>"; };
 		C415A557204485C900ADDB08 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C44B68842046847400967D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C47BA7C9204475FF008A1D83 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C47BA7CC20447989008A1D83 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		C48404BD2044832C00449B98 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		C49DD19120445DDF00C4ACB7 /* AZTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AZTabBarDelegate.swift; sourceTree = "<group>"; };
 		C49DD19720445E5900C4ACB7 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C49DD19F204461F500C4ACB7 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C49DD1A3204465BA00C4ACB7 /* AuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		C49DD1A4204465BA00C4ACB7 /* AuthDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		C49DD1AC204465BA00C4ACB7 /* StorageService+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageService+Image.swift"; sourceTree = "<group>"; };
 		C49DD1AD204465BA00C4ACB7 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		C49DD1AE204465BA00C4ACB7 /* ToolbarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarDelegate.swift; sourceTree = "<group>"; };
+		C4B67BFA20466F5E001F9A45 /* UIApplication+topViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+topViewController.swift"; sourceTree = "<group>"; };
+		C4B67BFC20468145001F9A45 /* UIAlertController+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Factory.swift"; sourceTree = "<group>"; };
 		C4F1500D20446DAB00E225F6 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +124,8 @@
 				C4F1500D20446DAB00E225F6 /* UploadView.swift */,
 				C415A557204485C900ADDB08 /* FeedCell.swift */,
 				C48404BD2044832C00449B98 /* FeedView.swift */,
+				C44B68842046847400967D8A /* GoogleService-Info.plist */,
 				54915220203F335F009C7138 /* Info.plist */,
-				C49DD19D2044618C00C4ACB7 /* GoogleService-Info.plist */,
 				54915226203F339A009C7138 /* Assets.xcassets */,
 			);
 			path = "AC-iOS-Final";
@@ -163,6 +167,8 @@
 				C49DD19920445E6E00C4ACB7 /* UIColor+Hex.swift */,
 				C49DD19720445E5900C4ACB7 /* Stylesheet.swift */,
 				C40FB1742044B0D100C56E6A /* UIViewController+Nav.swift */,
+				C4B67BFA20466F5E001F9A45 /* UIApplication+topViewController.swift */,
+				C4B67BFC20468145001F9A45 /* UIAlertController+Factory.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -289,10 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49DD19E2044618C00C4ACB7 /* GoogleService-Info.plist in Resources */,
 				5491521F203F335F009C7138 /* LaunchScreen.storyboard in Resources */,
 				54915227203F339A009C7138 /* Assets.xcassets in Resources */,
 				C49DD19520445DDF00C4ACB7 /* AZTabBarController.xib in Resources */,
+				C44B68852046847500967D8A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +396,7 @@
 				C49DD1B2204465BA00C4ACB7 /* DBService+Set.swift in Sources */,
 				C47BA7CD20447989008A1D83 /* FeedVC.swift in Sources */,
 				C47BA7CA204475FF008A1D83 /* Post.swift in Sources */,
+				C4B67BFD20468145001F9A45 /* UIAlertController+Factory.swift in Sources */,
 				C49DD1B4204465BA00C4ACB7 /* DBService.swift in Sources */,
 				C49DD1B8204465BA00C4ACB7 /* ToolbarDelegate.swift in Sources */,
 				C49DD19420445DDF00C4ACB7 /* AZTabBarController.swift in Sources */,
@@ -410,6 +417,7 @@
 				C49DD18A20445D3800C4ACB7 /* TabBarVC.swift in Sources */,
 				C49DD19820445E5900C4ACB7 /* Stylesheet.swift in Sources */,
 				C415A558204485C900ADDB08 /* FeedCell.swift in Sources */,
+				C4B67BFB20466F5E001F9A45 /* UIApplication+topViewController.swift in Sources */,
 				C4F1500E20446DAB00E225F6 /* UploadView.swift in Sources */,
 				C49DD19220445DDF00C4ACB7 /* AZTabBarButton.swift in Sources */,
 				54915215203F335F009C7138 /* AppDelegate.swift in Sources */,

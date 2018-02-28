@@ -8,26 +8,19 @@
 
 import UIKit
 import ILLoginKit
-import FirebaseAuth
 
 class UploadVC: UIViewController {
     
     let contentView = UploadView()
-    
-    lazy var loginCoordinator: LoginCoordinator = {
-        return LoginCoordinator(rootViewController: self)
-    }()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(contentView)
         view.backgroundColor = .white
+        navigationItem.title = "Upload Photo"
+        navigationController?.navigationBar.barTintColor = Stylesheet.Colors.LightBlue
         setButtonActions()
-        
-        if Auth.auth().currentUser == nil {
-            showLogin()
-        }
     }
     
     // MARK: - User Actions
@@ -59,13 +52,6 @@ class UploadVC: UIViewController {
 }
 
 private extension UploadVC {
-    
-    // Handles Login
-    func showLogin() {
-        loginCoordinator.start()
-        loginCoordinator.authClient.delegate = self
-    }
-    
     // Alert Controllers
     enum AlertReason {
         case success
@@ -87,26 +73,6 @@ private extension UploadVC {
         }
         actions.forEach({alertController.addAction($0)})
         present(alertController, animated: true, completion: nil)
-    }
-}
-
-extension UploadVC: AuthDelegate {
-    func failedSignIn(error: Error) {
-        print("Failed to sign in!")
-    }
-    
-    func failedCreateUser(error: Error) {
-        print("Failed to create user!")
-    }
-    
-    func didCreateUser(user: User) {
-        print("Created user \(user.email)")
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func didSignIn(user: User) {
-        print("Signed in user \(user.email)")
-        dismiss(animated: true, completion: nil)
     }
 }
 

@@ -13,8 +13,14 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
     
     let authClient = AuthClient()
     
-    // MARK: - LoginCoordinator
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        if rootViewController is AuthDelegate {
+            authClient.delegate = rootViewController as! AuthDelegate
+        }
+    }
     
+    // MARK: - LoginCoordinator
     override func start() {
         super.start()
         configureAppearance()

@@ -6,7 +6,7 @@
 //  Copyright © 2018 C4Q. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseAuth
 
 class AuthClient: NSObject {
@@ -28,7 +28,7 @@ class AuthClient: NSObject {
     func createUser(withEmail: String, password: String, displayName: String?) {
         Auth.auth().createUser(withEmail: withEmail, password: password) { [weak self] (user, error) in
             if let error = error {
-                self?.delegate.handle(error: error)
+                self?.delegate.failedCreateUser?(error: error)
             }
             
             if let createdUser = user {
@@ -60,7 +60,6 @@ class AuthClient: NSObject {
     func signIn(withEmail: String, password: String) {
         Auth.auth().signIn(withEmail: withEmail, password: password) { [weak self]  (user, error) in
             if let error = error {
-                self?.delegate.handle(error: error)
                 self?.delegate.failedSignIn?(error: error)
             }
             

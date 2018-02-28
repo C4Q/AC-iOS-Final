@@ -17,7 +17,7 @@ final class FeedView: UIView {
         tv.separatorStyle = .none
         tv.estimatedRowHeight = 100
         tv.rowHeight = UITableViewAutomaticDimension
-        tv.backgroundColor = .green
+        tv.backgroundColor = .white
         tv.allowsSelection = false
         tv.layoutEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return tv

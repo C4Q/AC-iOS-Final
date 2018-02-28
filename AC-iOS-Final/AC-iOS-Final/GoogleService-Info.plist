@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>340302797489-tkeh0nta4vell45vr1tse3buo012su26.apps.googleusercontent.com</string>
+	<string>340302797489-t9g4dcl55dtvphhvi7tf58p3ab67hiq0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.340302797489-tkeh0nta4vell45vr1tse3buo012su26</string>
+	<string>com.googleusercontent.apps.340302797489-t9g4dcl55dtvphhvi7tf58p3ab67hiq0</string>
 	<key>API_KEY</key>
 	<string>AIzaSyA5H5UX7dTwzNhasEI6oa27MMek88KkSck</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>c4q.AC-iOS-Final</string>
+	<string>c4q.AC-Final</string>
 	<key>PROJECT_ID</key>
 	<string>meetlyunit6final</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:340302797489:ios:96b1b3bc7fb95f5f</string>
+	<string>1:340302797489:ios:5fbffb2962819a98</string>
 	<key>DATABASE_URL</key>
 	<string>https://meetlyunit6final.firebaseio.com</string>
 </dict>

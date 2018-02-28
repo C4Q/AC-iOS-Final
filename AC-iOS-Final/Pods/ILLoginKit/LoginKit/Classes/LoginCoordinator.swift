@@ -226,14 +226,19 @@ extension LoginCoordinator: InitialViewControllerDelegate {
     }
 
     func didSelectFacebook(_ viewController: UIViewController) {
-        facebookService.login(from: viewController) { (result) in
-            switch result {
-            case .success(let profile):
-                self.enterWithFacebook(profile: profile)
-            default:
-                break
-            }
-        }
+        let alertController = UIAlertController(title: "Error", message: "Facebook button disabled for now.", preferredStyle: .alert)
+        let me = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let actions = [me]
+        actions.forEach({alertController.addAction($0)})
+        viewController.present(alertController, animated: true, completion: nil)
+//        facebookService.login(from: viewController) { (result) in
+//            switch result {
+//            case .success(let profile):
+//                self.enterWithFacebook(profile: profile)
+//            default:
+//                break
+//            }
+//        }
     }
 
 }

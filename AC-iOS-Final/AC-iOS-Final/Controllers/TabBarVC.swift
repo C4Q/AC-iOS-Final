@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import FirebaseAuth.FIRUser
 
 class TabBarVC: UIViewController {
+    
+    lazy var loginCoordinator: LoginCoordinator = {
+        return LoginCoordinator(rootViewController: self)
+    }()
+    
+    func showLogin() {
+        loginCoordinator.start()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         applyTabBar(into: self)
+        if AuthClient.currentUser == nil {
+            showLogin()
+        }
     }
     
     func applyTabBar(into controller: UIViewController) {
@@ -25,7 +37,7 @@ class TabBarVC: UIViewController {
         tabController.setTitle("Feed", atIndex: 0)
         
         
-        tabController.setViewController(UploadVC(), atIndex: 1)
+        tabController.setViewController(UploadVC().inNavController(), atIndex: 1)
         tabController.setTitle("Upload", atIndex: 1)
         
         // Configure tab bar apparance
@@ -40,6 +52,29 @@ class TabBarVC: UIViewController {
         tabController.separatorLineVisible = true
         tabController.animateTabChange = true
     }
+}
+
+extension TabBarVC: AuthDelegate {
+    func didSignIn(user: User) {
+        print("Signed in user \(String(describing: user.email?.description))")
+        loginCoordinator.finish()
+    }
+    
+    func didCreateUser(user: User) {
+        print("Created user \(String(describing: user.email?.description))")
+        loginCoordinator.finish()
+    }
+    
+    func failedSignIn(error: Error) {
+        print("Failed to sign in!")
+        handle(error: error)
+    }
+    
+    func failedCreateUser(error: Error) {
+        print("Failed to create user!")
+        handle(error: error)
+    }
+    
 }
 
 

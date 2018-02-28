@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Material
-import SnapKit
-import FirebaseAuth
 import CodableFirebase
 
 class FeedVC: UIViewController {
@@ -17,23 +14,20 @@ class FeedVC: UIViewController {
     let feedView = FeedView()
     let authClient = AuthClient()
     
-    lazy var loginCoordinator: LoginCoordinator = {
-        return LoginCoordinator(rootViewController: self)
-    }()
-    
     var post = [Post]() {
         didSet {
             feedView.tableView.reloadData()
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareContentView()
         view.backgroundColor = .white
         navigationItem.title = "Photo Feed"
+        navigationController?.navigationBar.barTintColor = Stylesheet.Colors.LightBlue
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logOut))
+        authClient.delegate = self
         self.feedView.tableView.dataSource = self
         self.feedView.tableView.delegate = self
     }
@@ -51,14 +45,11 @@ class FeedVC: UIViewController {
         })
     }
     
-    func showLogin() {
-        loginCoordinator.start()
-        loginCoordinator.authClient.delegate = self
-    }
-    
     @objc func logOut() {
         authClient.signOut()
-        showLogin()
+        if let loginController = (self.parent?.currentTabBar?.parent as? TabBarVC)?.loginCoordinator {
+            loginController.start()
+        }
     }
     
     private func prepareContentView() {
@@ -83,7 +74,6 @@ extension FeedVC: UITableViewDataSource {
     // MARK: - Cell Rendering
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
-//        let post = Post(createdBy: "Sai", comment: "Comment", date: "Date", userID: "UID")
         let post = self.post[indexPath.row]
         cell.configure(with: post)
         return cell
@@ -93,9 +83,6 @@ extension FeedVC: UITableViewDataSource {
 
 // MARK: Table View Delegate
 extension FeedVC: UITableViewDelegate {
-    
-    // MARK: Cell Selection
-    
     // MARK: Section Header Configuration
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return nil
@@ -108,13 +95,5 @@ extension FeedVC: UITableViewDelegate {
 }
 
 extension FeedVC: AuthDelegate {
-    func didSignIn(user: User) {
-        print("Signed in user \(user.email)")
-        dismiss(animated: true, completion: nil)
-    }
     
-    func didCreateUser(user: User) {
-        print("Created user \(user.email)")
-        dismiss(animated: true, completion: nil)
-    }
 }

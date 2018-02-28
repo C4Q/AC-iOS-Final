@@ -67,7 +67,7 @@ final class UploadView: UIView {
     private func setTextField() {
         addSubview(createPostTV)
         createPostTV.snp.makeConstraints{(make) in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(30)
             make.width.equalTo(self.snp.width).multipliedBy(0.9)
             make.height.equalTo(self.snp.height).dividedBy(8)
             make.centerX.equalTo(self.snp.centerX)

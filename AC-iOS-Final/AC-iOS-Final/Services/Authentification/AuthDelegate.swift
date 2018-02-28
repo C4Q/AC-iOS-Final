@@ -17,7 +17,7 @@ import FirebaseAuth
     @objc optional func failedCreateUser(error: Error)
 }
 
-extension AuthDelegate {
+extension AuthDelegate where Self: UIViewController {
     func handle(error: Error) {
         let nsError = error as NSError
         if let errorCode = AuthErrorCode(rawValue: nsError.code) {
@@ -27,7 +27,7 @@ extension AuthDelegate {
             case .invalidEmail:
                 print("Email is invalid.")
             case .weakPassword:
-                print("Password too weak \(nsError.userInfo["NSLocalizedFailureReasonErrorKey"]!)")
+                print("Password too weak.")
             case .wrongPassword:
                 print("Wrong password")
             case .tooManyRequests:
@@ -39,6 +39,9 @@ extension AuthDelegate {
             default:
                 print("\(nsError.localizedDescription)")
             }
+            UIAlertController.create(from: nsError)
         }
     }
+    
+    
 }
