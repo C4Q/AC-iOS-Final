@@ -13,7 +13,7 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - Properties
     lazy public var postImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.image = #imageLiteral(resourceName: "camera_icon")
         imageView.clipsToBounds = true
         imageView.backgroundColor = .lightGray
@@ -58,44 +58,44 @@ extension PostTableViewCell {
         setupPostImageView()
     }
     
-//    private func setupCommentLabel() {
-//        addSubview(commentLabel)
-//        commentLabel.snp.makeConstraints { (make) in
-//            make.bottom.equalTo(snp.bottom)
-//            make.leading.equalTo(snp.leading).offset(AppSettings.padding)
-//            make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
-//        }
-//    }
-    
     private func setupCommentLabel() {
         addSubview(commentLabel)
-        commentLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            commentLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-            commentLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            commentLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            ])
+        commentLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(snp.bottom)
+            make.leading.equalTo(snp.leading).offset(AppSettings.padding)
+            make.trailing.equalTo(snp.trailing).offset(AppSettings.padding)
+        }
     }
     
-//    private func setupPostImageView() {
-//        addSubview(postImageView)
-//        postImageView.snp.makeConstraints { (make) in
-//            make.bottom.equalTo(commentLabel.snp.top).offset(20)
-//            make.width.equalTo(snp.width)
-//            make.centerX.equalTo(snp.centerX)
-//            make.top.equalTo(snp.top)
-//        }
+//    private func setupCommentLabel() {
+//        addSubview(commentLabel)
+//        commentLabel.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            commentLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+//            commentLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            commentLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            ])
 //    }
     
     private func setupPostImageView() {
         addSubview(postImageView)
-        postImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            postImageView.bottomAnchor.constraint(equalTo: commentLabel.topAnchor),
-            postImageView.widthAnchor.constraint(equalTo: widthAnchor),
-            postImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            postImageView.topAnchor.constraint(equalTo: topAnchor)
-            ])
+        postImageView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(commentLabel.snp.top).offset(20)
+            make.width.equalTo(snp.width)
+            make.centerX.equalTo(snp.centerX)
+            make.top.equalTo(snp.top)
+        }
     }
+    
+//    private func setupPostImageView() {
+//        addSubview(postImageView)
+//        postImageView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            postImageView.bottomAnchor.constraint(equalTo: commentLabel.topAnchor),
+//            postImageView.widthAnchor.constraint(equalTo: widthAnchor),
+//            postImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            postImageView.topAnchor.constraint(equalTo: topAnchor)
+//            ])
+//    }
 
 }
