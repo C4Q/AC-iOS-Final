@@ -16,9 +16,9 @@ extension DBService {
         childByAutoId.setValue(["userID"  : FirebaseAuthService.getCurrentUser()!.uid,
                                 "comment" : comment]) { (error, dbRef) in
                                     if let error = error {
-                                        print("addCategory error: \(error)")
+                                        print("addPost error: \(error)")
                                     } else {
-                                        print("category added @ database reference: \(dbRef)")
+                                        print("post added @ database reference: \(dbRef)")
                                         StorageService.manager.storePostImage(postImage: postImage, postID: childByAutoId.key)
                                     }
         }

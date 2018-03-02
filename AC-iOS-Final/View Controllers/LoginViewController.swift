@@ -169,8 +169,6 @@ class LoginViewController: UIViewController {
     
 }
 
-
-// MARK:- Firebase Auth delegate functions
 extension LoginViewController: FirebaseAuthServiceDelegate {
     
     func didCreateUser(_ authService: FirebaseAuthService, user: User) {
@@ -194,7 +192,7 @@ extension LoginViewController: FirebaseAuthServiceDelegate {
     
     func didSignIn(_ authService: FirebaseAuthService, user: User) {
         if FirebaseAuthService.getCurrentUser()!.isEmailVerified {
-            let signInAlertController = UIAlertController(title: "Login Successful", message: nil, preferredStyle: .alert)
+            let signInAlertController = UIAlertController(title: "Login Successful!", message: nil, preferredStyle: .alert)
             let continueAction = UIAlertAction(title: "Continue", style: .default) {alert in
                 self.dismiss(animated: true, completion: nil)
             }
