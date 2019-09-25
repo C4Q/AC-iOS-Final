@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Chicken Nugget wants to access your photo Library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Chicken Nugget wants to access your photo Camera</string>
 </dict>
 </plist>
